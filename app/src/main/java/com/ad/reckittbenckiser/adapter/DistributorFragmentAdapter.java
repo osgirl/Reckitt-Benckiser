@@ -8,11 +8,11 @@ import com.ad.reckittbenckiser.fragments.asmlevelopportunity.AsmPerformanceFragm
 import com.ad.reckittbenckiser.fragments.asmlevelopportunity.TsiListFragment;
 
 /**
- * Created by laxmi.khatri on 8/17/2016.
+ * Created by laxmi.khatri on 8/19/2016.
  */
-public class TsiFragmentAdapter extends FragmentPagerAdapter {
+public class DistributorFragmentAdapter extends FragmentPagerAdapter {
 
-    public TsiFragmentAdapter(FragmentManager fragmentManager) {
+    public DistributorFragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
@@ -32,3 +32,4 @@ public class TsiFragmentAdapter extends FragmentPagerAdapter {
         return 2;
     }
 }
+
