@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Reckitt-Benckiser</string>
+
+    <!--Login Screen-->
+    <string name="oops">Oops, </string>
+    <string name="validation_name">Please enter your name</string>
+    <string name="validation_password">Please enter your password</string>
+    <string name="validation_email">Please enter your email</string>
+    <string name="validation_valid_email">Please enter your valid email</string>
+    <string name="valid_user_error">Entered user name password is  wrong</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 </resources>

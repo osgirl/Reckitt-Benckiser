@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical"
-    android:background="@drawable/b"
+    android:background="@drawable/app_blue_background"
     >
 
     <LinearLayout
@@ -55,7 +55,7 @@
             android:background="@drawable/curve_corner"
             android:paddingRight="@dimen/margin10"
             android:paddingLeft="@dimen/margin20"
-            android:hint="email@airnz.co.nz"
+            android:hint="email"
             android:singleLine="true"
             android:inputType="textEmailAddress"
             android:gravity="center_vertical"
