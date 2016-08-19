@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.utils.AppConfig;
@@ -56,7 +58,20 @@ public class LoginActivity extends Activity {
     }
 
     private void goToHome(){
-        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        /*Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        startActivity(intent);*/
+
+        Intent intent = new Intent(LoginActivity.this, TsiListActivity.class);
         startActivity(intent);
+
+
+       /* ImageView imageView = (ImageView) findViewById(R.id.btnLogin);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, TsiListActivity.class);
+                startActivity(intent);
+            }
+        });*/
     }
 }

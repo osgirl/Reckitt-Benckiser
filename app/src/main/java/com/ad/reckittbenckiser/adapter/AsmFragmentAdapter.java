@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.ad.reckittbenckiser.fragments.asmlevelopportunity.AsmListFragment;
-import com.ad.reckittbenckiser.fragments.asmlevelopportunity.ZonePerformanceFragment;
+import com.ad.reckittbenckiser.fragments.zonelevelopportunity.AsmListFragment;
+import com.ad.reckittbenckiser.fragments.zonelevelopportunity.ZonePerformanceFragment;
 
 /**
  * Created by bansal.shiva on 8/19/2016.
