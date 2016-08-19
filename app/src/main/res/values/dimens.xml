@@ -2,4 +2,37 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="outer_arc_width">50dp</dimen>
+    <dimen name="my_profile_view_radius">35dp</dimen>
+
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin18">18dp</dimen>
+    <dimen name="margin25">25dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="margin35">35dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin45">45dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="margin75">75dp</dimen>
+    <dimen name="margin100">100dp</dimen>
+    <dimen name="margin120">120dp</dimen>
+
+    <dimen name="txt_size_heading">33sp</dimen>
+    <dimen name="txt_size_small">17sp</dimen>
+    <dimen name="txt_size_bottom">15sp</dimen>
+    <dimen name="tab_txt_size_bottom">17sp</dimen>
+    <dimen name="txt_size_12">12sp</dimen>
+    <dimen name="txt_size_normal">18sp</dimen>
+    <dimen name="tab_txt_size_normal">25sp</dimen>
+    <dimen name="txt_menu_normal">20sp</dimen>
+    <dimen name="txt_size_btn">24sp</dimen>
+    <dimen name="txt_group_normal">18sp</dimen>
+
+    <dimen name="editText_height">50dp</dimen>
+
+
 </resources>
