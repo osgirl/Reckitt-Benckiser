@@ -62,40 +62,5 @@ public class TsiListFragment extends Fragment {
         tsiRecyclerView.setLayoutManager(llm);
         tsiListAdapter = new TsiListAdapter(getActivity(), tsiInfoList);
         tsiRecyclerView.setAdapter(tsiListAdapter);
-
-        /*final GestureDetector mGestureDetector = new GestureDetector(getActivity(),
-                new GestureDetector.SimpleOnGestureListener() {
-                    @Override
-                    public boolean onSingleTapUp(MotionEvent e) {
-                        return true;
-                    }
-
-                });
-
-        tsiRecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
-            @Override
-            public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
-                View child = recyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
-
-
-                if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
-                    // call fragment on main container form here
-                    Intent intent = new Intent(getActivity(), DistributorListActivity.class);
-                    startActivity(intent);
-                    return true;
-                }
-                return false;
-            }
-
-            @Override
-            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-            }
-
-            @Override
-            public void onTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
-
-            }
-        });*/
     }
 }

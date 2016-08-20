@@ -15,6 +15,7 @@ import com.ad.reckittbenckiser.adapter.TsiListAdapter;
 import com.ad.reckittbenckiser.utils.AppConfig;
 import com.ad.reckittbenckiser.utils.Constants;
 import com.ad.reckittbenckiser.utils.Tracer;
+import com.ad.reckittbenckiser.vo.DistributorInfo;
 import com.ad.reckittbenckiser.vo.TSIInfo;
 
 import java.util.List;
@@ -28,18 +29,18 @@ import butterknife.ButterKnife;
 public class DistributorListFragment extends Fragment {
 
     @Bind(R.id.fragment_distributor_list_rv)
-    RecyclerView tsiRecyclerView;
+    RecyclerView distRecyclerView;
 
     DistributorListAdapter distributorListAdapter;
 
-    List<TSIInfo> tsiInfoList;
+    List<DistributorInfo> distInfoList;
 
     private String TAG = AppConfig.BaseTag + "." + DistributorListFragment.class.getSimpleName();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        tsiInfoList = Constants.getTsiList();
+        distInfoList = Constants.getDistributorList();
     }
 
     @Nullable
@@ -55,8 +56,8 @@ public class DistributorListFragment extends Fragment {
     private void initViewAndAdapter() {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-        tsiRecyclerView.setLayoutManager(llm);
-        distributorListAdapter = new DistributorListAdapter(getActivity(), tsiInfoList);
-        tsiRecyclerView.setAdapter(distributorListAdapter);
+        distRecyclerView.setLayoutManager(llm);
+        distributorListAdapter = new DistributorListAdapter(getActivity(), distInfoList);
+        distRecyclerView.setAdapter(distributorListAdapter);
     }
 }
