@@ -24,11 +24,16 @@
             android:theme="@style/AppTheme"></activity>
 
         <activity
+            android:name=".activities.OpportunityZone"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
             android:name=".activities.TsiListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
 
-        <activity android:name=".activities.HomeActivity"
+        <activity android:name=".activities.DashBoardActivity"
             android:theme="@style/HomeTheme"
             android:screenOrientation="portrait">
         </activity>

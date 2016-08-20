@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F81B1"
+    android:weightSum="1">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_weight=".3"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin20"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin5"
+            android:layout_toRightOf="@+id/header"
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/graph"
+            app:civ_border_color="#FF000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/header"
+            android:text="Opportunity Analysis Tool"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textSize="22dp"
+            />
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/rb_logo"
+                android:layout_marginTop="10dp"
+                android:id="@+id/logo"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:text="A plan for \nbetter business"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin20"
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:gravity="bottom"
+                android:textSize="20dp"
+                android:id="@+id/textView" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight=".35"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="1"
+        >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/east"
+            android:layout_weight=".5">
+
+            <ImageView
+                android:id="@+id/eastImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/east"
+                />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="#D9FF4081"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|bottom"
+                    android:layout_marginRight="@dimen/margin40"
+                    android:layout_alignParentBottom="true"
+                    android:text="East"
+                    android:textSize="@dimen/txt_size_bottom"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/margin10"
+                    android:paddingTop="@dimen/margin5"
+                    android:paddingLeft="@dimen/margin5"
+                    android:paddingRight="@dimen/margin5"
+                    android:maxLines="2"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/south"
+            android:layout_weight=".5">
+
+            <ImageView
+                android:id="@+id/southImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/south"
+                />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="#D9FF4081"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|bottom"
+                    android:layout_marginRight="@dimen/margin40"
+                    android:layout_alignParentBottom="true"
+                    android:text="South"
+                    android:textSize="@dimen/txt_size_bottom"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/margin10"
+                    android:paddingTop="@dimen/margin5"
+                    android:paddingLeft="@dimen/margin5"
+                    android:paddingRight="@dimen/margin5"
+                    android:maxLines="2"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight=".35"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="1"
+        >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/west"
+            android:layout_weight=".5">
+
+            <ImageView
+                android:id="@+id/westImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/west"
+                />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="#D9FF4081"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|bottom"
+                    android:layout_marginRight="@dimen/margin40"
+                    android:layout_alignParentBottom="true"
+                    android:text="West"
+                    android:textSize="@dimen/txt_size_bottom"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/margin10"
+                    android:paddingTop="@dimen/margin5"
+                    android:paddingLeft="@dimen/margin5"
+                    android:paddingRight="@dimen/margin5"
+                    android:maxLines="2"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!-- <ImageButton
+             android:text="West"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:id="@+id/west"
+             android:src="@drawable/west"
+             android:layout_gravity="bottom"
+             android:scaleType="centerCrop"
+             android:layout_weight=".5" />-->
+
+        <!--<ImageButton
+            android:text="North"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/north"
+            android:src="@drawable/north"
+            android:scaleType="centerCrop"
+            android:layout_weight=".5" />-->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/north"
+            android:layout_weight=".5">
+
+            <ImageView
+                android:id="@+id/imageStory1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/north"
+                />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="#D9FF4081"
+                >
+                <TextView
+                    android:id="@+id/txtStory1Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|bottom"
+                    android:layout_marginRight="@dimen/margin40"
+                    android:layout_alignParentBottom="true"
+                    android:text="North"
+                    android:textSize="@dimen/txt_size_bottom"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/margin10"
+                    android:paddingTop="@dimen/margin5"
+                    android:paddingLeft="@dimen/margin5"
+                    android:paddingRight="@dimen/margin5"
+                    android:maxLines="2"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

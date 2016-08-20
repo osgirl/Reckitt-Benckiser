@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.components.RadiationView;
+import com.ad.reckittbenckiser.utils.PreferenceKeys;
+import com.ad.reckittbenckiser.utils.SharedPreferenceManager;
 import com.ad.reckittbenckiser.utils.Util;
 
 import java.util.Timer;
@@ -34,12 +36,15 @@ public class SplashActivity extends Activity implements View.OnClickListener {
     @Bind(R.id.layoutKiaOra)
     LinearLayout layoutKiaOra;
 
+    private SharedPreferenceManager mSharedPreferenceManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash_design);
         ButterKnife.bind(this);
+        mSharedPreferenceManager = new SharedPreferenceManager(this);
         layoutKiaOra.setOnClickListener(this);
     }
 
@@ -83,15 +88,15 @@ public class SplashActivity extends Activity implements View.OnClickListener {
                     public void run() {
                         //stopRadarAnimation();
                         layoutKiaOra.setOnClickListener(SplashActivity.this);
-                        Intent registerIntent = new Intent(SplashActivity.this, LoginActivity.class);
-                        startActivity(registerIntent);
 
-                       /* if (mPreferenceManager.getStringData(PreferenceKeys.SESSION_TOKEN).equalsIgnoreCase("")) {
-                            Intent registerIntent = new Intent(SplashActivity.this, RegisterLoginActivity.class);
-                            startActivity(registerIntent);
+                        if (mSharedPreferenceManager.getBooleanData(PreferenceKeys.IS_UER_USER_LOGIN)) {
+                            Intent intent = new Intent(SplashActivity.this, OpportunityZone.class);
+                            startActivity(intent);
                         } else {
-                            goToHome();
-                        }*/
+                            Intent registerIntent = new Intent(SplashActivity.this, LoginActivity.class);
+                            startActivity(registerIntent);
+
+                        }
                         stopRadarAnimation();
                     }
                 });

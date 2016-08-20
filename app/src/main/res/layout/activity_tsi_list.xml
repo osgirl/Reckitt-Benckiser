@@ -16,7 +16,6 @@
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"></android.support.v7.widget.Toolbar>
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/activity_tsi_list_view_pager"
         android:layout_width="match_parent"

@@ -3,8 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frame"
-    android:background="@drawable/splash2"
     tools:context=".activities.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash3"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/margin50"
+    />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="@dimen/margin40"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="@dimen/margin50"
+        android:layout_gravity="center"
+        android:id="@+id/imageView" />
 
     <LinearLayout
         android:id="@+id/layoutKiaOra"
@@ -43,4 +61,5 @@
             />
     </LinearLayout>
 </FrameLayout>
+
 

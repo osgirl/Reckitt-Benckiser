@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.utils.AppConfig;
+import com.ad.reckittbenckiser.utils.PreferenceKeys;
+import com.ad.reckittbenckiser.utils.SharedPreferenceManager;
 import com.ad.reckittbenckiser.utils.Util;
 
 import butterknife.Bind;
@@ -29,11 +31,14 @@ public class LoginActivity extends Activity {
     EditText editPassword;
 
 
+    private SharedPreferenceManager mSharedPreferenceManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        mSharedPreferenceManager = new SharedPreferenceManager(this);
     }
 
     @OnClick(R.id.btnLogin)
@@ -52,26 +57,14 @@ public class LoginActivity extends Activity {
     private void verifyUser() {
         if (editEmail.getText().toString().trim().equals(AppConfig.USER_EMAIL) && editPassword.getText().toString().equals(AppConfig.USER_PASSWORD)) {
             goToHome();
+            mSharedPreferenceManager.setBooleanData(PreferenceKeys.IS_UER_USER_LOGIN, true);
         } else {
             Toast.makeText(getApplicationContext(), getResources().getString(R.string.oops) + " " + getResources().getString(R.string.valid_user_error), Toast.LENGTH_LONG).show();
         }
     }
 
     private void goToHome(){
-        /*Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-        startActivity(intent);*/
-
-        Intent intent = new Intent(LoginActivity.this, TsiListActivity.class);
+        Intent intent = new Intent(LoginActivity.this, OpportunityZone.class);
         startActivity(intent);
-
-
-       /* ImageView imageView = (ImageView) findViewById(R.id.btnLogin);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, TsiListActivity.class);
-                startActivity(intent);
-            }
-        });*/
     }
 }
