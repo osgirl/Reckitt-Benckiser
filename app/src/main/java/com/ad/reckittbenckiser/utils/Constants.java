@@ -1,5 +1,8 @@
 package com.ad.reckittbenckiser.utils;
 
+import com.ad.reckittbenckiser.vo.DbsrInfo;
+import com.ad.reckittbenckiser.vo.DistributorInfo;
+import com.ad.reckittbenckiser.vo.StoreInfo;
 import com.ad.reckittbenckiser.vo.TSIInfo;
 
 import java.util.ArrayList;
@@ -23,4 +26,36 @@ public class Constants {
         return tsiInfos;
     }
 
+    public static List<DistributorInfo> getDistributorList() {
+
+        List<DistributorInfo> distInfos = new ArrayList<>();
+        distInfos.add(new DistributorInfo("Agarwal Agency - ph2", "-8.7%", "70.17"));
+        distInfos.add(new DistributorInfo("Shree Gopal Agency - Ph3", "22.8%", "62.56"));
+        distInfos.add(new DistributorInfo("Rajpal Agency - ph2", "21.1%", "35.83"));
+
+        return distInfos;
+    }
+
+    public static List<DbsrInfo> getDbsrList() {
+        List<DbsrInfo> dbsrInfos = new ArrayList<>();
+        dbsrInfos.add(new DbsrInfo("YESHWANT SAHU", "16%", "49.19"));
+        dbsrInfos.add(new DbsrInfo("RAJESH VYAS", "-66%", "9.81"));
+        dbsrInfos.add(new DbsrInfo("RAJKUMAR BANSOD", "72%", "7.37"));
+        dbsrInfos.add(new DbsrInfo("VIKAS MISHRA", "-45%", "3.80"));
+        dbsrInfos.add(new DbsrInfo("NA", "-100%", "0.00"));
+        dbsrInfos.add(new DbsrInfo("AMIN KHAN", "-100%", "0.00"));
+
+        return dbsrInfos;
+    }
+
+    public static List<StoreInfo> getStoreList() {
+        List<StoreInfo> storeInfos = new ArrayList<>();
+        storeInfos.add(new StoreInfo("Vision", "-77.1%", "10.84"));
+        storeInfos.add(new StoreInfo("Udaan", "82.5%", "37.19"));
+        storeInfos.add(new StoreInfo("Wholesale", "3693.7%", "0.12"));
+        storeInfos.add(new StoreInfo("A+B", "-82.7%", "1.01"));
+        storeInfos.add(new StoreInfo("Rest", "408.8%", "0.05"));
+
+        return storeInfos;
+    }
 }

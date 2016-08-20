@@ -10,10 +10,9 @@ import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.activities.DbsrActivity;
-import com.ad.reckittbenckiser.activities.DistributorListActivity;
 import com.ad.reckittbenckiser.views.CustomTextView;
-import com.ad.reckittbenckiser.vo.DistributorInfo;
-import com.ad.reckittbenckiser.vo.TSIInfo;
+import com.ad.reckittbenckiser.vo.DbsrInfo;
+import com.ad.reckittbenckiser.vo.StoreInfo;
 
 import java.util.List;
 
@@ -21,51 +20,42 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by laxmi.khatri on 8/19/2016.
+ * Created by Laxmi.Khatri on 8/20/2016.
  */
-public class DistributorListAdapter extends RecyclerView.Adapter<DistributorListAdapter.ViewHolder> {
+public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.ViewHolder> {
 
-    private List<DistributorInfo> mDistList;
+    private List<StoreInfo> mStoreList;
     private Context mContext;
 
-    public DistributorListAdapter(Context context, List<DistributorInfo> distList) {
-        mDistList = distList;
+    public StoreListAdapter(Context context, List<StoreInfo> storeList) {
+        mStoreList = storeList;
         mContext = context;
     }
 
     @Override
-    public DistributorListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dist_list_row, parent, false);
+    public StoreListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.store_list_row, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final DistributorInfo distributorInfo = mDistList.get(position);
+        final StoreInfo storeInfo = mStoreList.get(position);
 
-        holder.tvDistName.setText(distributorInfo.getDistributorName());
-        holder.tvGrowth.setText(distributorInfo.getGrowth());
-        holder.tvOpp.setText(distributorInfo.getOpportunity());
+        holder.tvStoreName.setText(storeInfo.getStoreName());
+        holder.tvGrowth.setText(storeInfo.getGrowth());
+        holder.tvOpp.setText(storeInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
         }
-        holder.llContainer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-                    Intent intent = new Intent(mContext, DbsrActivity.class);
-                    mContext.startActivity(intent);
-                }
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
-        return mDistList.size();
+        return mStoreList.size();
     }
 
     /*
@@ -79,8 +69,8 @@ public class DistributorListAdapter extends RecyclerView.Adapter<DistributorList
         @Bind(R.id.view)
         View view;
 
-        @Bind(R.id.tv_dist_name)
-        CustomTextView tvDistName;
+        @Bind(R.id.tv_store_name)
+        CustomTextView tvStoreName;
 
         @Bind(R.id.tv_growth)
         CustomTextView tvGrowth;

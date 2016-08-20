@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
-import com.ad.reckittbenckiser.activities.DistributorListActivity;
+import com.ad.reckittbenckiser.activities.DbsrActivity;
+import com.ad.reckittbenckiser.activities.StoreActivity;
 import com.ad.reckittbenckiser.views.CustomTextView;
-import com.ad.reckittbenckiser.vo.TSIInfo;
+import com.ad.reckittbenckiser.vo.DbsrInfo;
+import com.ad.reckittbenckiser.vo.DistributorInfo;
 
 import java.util.List;
 
@@ -19,44 +21,42 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by laxmi.khatri on 8/17/2016.
+ * Created by Laxmi.Khatri on 8/20/2016.
  */
-public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHolder> {
+public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHolder> {
 
-    private List<TSIInfo> mTsiList;
+    private List<DbsrInfo> mDbsrList;
     private Context mContext;
 
-    public TsiListAdapter(Context context, List<TSIInfo> tsiList) {
-        mTsiList = tsiList;
+    public DbsrListAdapter(Context context, List<DbsrInfo> dbsrList) {
+        mDbsrList = dbsrList;
         mContext = context;
     }
 
     @Override
-    public TsiListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.tsi_list_row, parent, false);
+    public DbsrListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dbsr_list_row, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final TSIInfo tsiInfo = mTsiList.get(position);
+        final DbsrInfo dbsrInfo = mDbsrList.get(position);
 
-        holder.tvTsiName.setText(tsiInfo.getTsiName());
-        holder.tvChannel.setText(tsiInfo.getChannel());
-        holder.tvGrowth.setText(tsiInfo.getGrowth());
-        holder.tvAs.setText(tsiInfo.getAveSales());
-        holder.tvOpp.setText(tsiInfo.getOpportunity());
+        holder.tvDistName.setText(dbsrInfo.getDbsrName());
+        holder.tvGrowth.setText(dbsrInfo.getGrowth());
+        holder.tvOpp.setText(dbsrInfo.getOpportunity());
         if (position % 2 == 0) {
-            holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
-        } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
+        } else {
+            holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
         }
         holder.llContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (position == 0) {
-                    Intent intent = new Intent(mContext, DistributorListActivity.class);
+                    Intent intent = new Intent(mContext, StoreActivity.class);
                     mContext.startActivity(intent);
                 }
             }
@@ -65,7 +65,7 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return mTsiList.size();
+        return mDbsrList.size();
     }
 
     /*
@@ -79,17 +79,11 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         @Bind(R.id.view)
         View view;
 
-        @Bind(R.id.tv_tsi_name)
-        CustomTextView tvTsiName;
-
-        @Bind(R.id.tv_channel)
-        CustomTextView tvChannel;
+        @Bind(R.id.tv_dbsr_name)
+        CustomTextView tvDistName;
 
         @Bind(R.id.tv_growth)
         CustomTextView tvGrowth;
-
-        @Bind(R.id.tv_as)
-        CustomTextView tvAs;
 
         @Bind(R.id.tv_opp)
         CustomTextView tvOpp;

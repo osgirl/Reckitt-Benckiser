@@ -15,8 +15,8 @@
         android:id="@+id/ll_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:clickable="true"
+        android:orientation="horizontal"
         android:padding="10dp">
 
         <View
@@ -30,27 +30,15 @@
             android:orientation="vertical">
 
             <com.ad.reckittbenckiser.views.CustomTextView
-                android:id="@+id/tv_tsi_name"
+                android:id="@+id/tv_store_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:padding="10dp"
-                android:text="Raipur Tsi"
+                android:text="Vision"
                 android:textColor="@color/primary_text"
                 android:textSize="20sp"
                 app:font="@string/omens_bold" />
-
-            <com.ad.reckittbenckiser.views.CustomTextView
-                android:id="@+id/tv_channel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="URBAN"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp"
-                app:font="@string/omens_regular" />
 
             <LinearLayout
                 android:id="@+id/ll_data"
@@ -72,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3.0%"
-                        android:textColor="@color/primary_text"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -80,30 +68,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Growth"
-                        android:textSize="13sp"
-                        app:font="@string/omens_regular" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <com.ad.reckittbenckiser.views.CustomTextView
-                        android:id="@+id/tv_as"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="188.2"
-                        android:textColor="@color/primary_text"
-                        android:textSize="15sp"
-                        app:font="@string/omens_regular" />
-
-                    <com.ad.reckittbenckiser.views.CustomTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Average Sales(in Lakhs)"
                         android:textSize="13sp"
                         app:font="@string/omens_regular" />
                 </LinearLayout>
@@ -128,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="168.6"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp"
                     app:font="@string/omens_bold" />
 
