@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F81B1"
+    android:background="@drawable/app_white_pattern"
     android:weightSum="1">
 
 
@@ -22,15 +22,15 @@
             android:id="@+id/profile_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:visibility="gone"
             android:src="@drawable/graph"
             app:civ_border_color="#FF000000"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/header"
             android:text="Opportunity Analysis Tool"
-            android:textColor="@color/white"
             android:singleLine="true"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/margin20"
@@ -43,10 +43,10 @@
             android:layout_height="match_parent"
             android:layout_below="@id/header">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/rb_logo"
+                android:src="@drawable/pic"
                 android:layout_marginTop="10dp"
                 android:id="@+id/logo"
                 android:layout_alignParentBottom="true"
@@ -59,7 +59,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/margin20"
                 android:textStyle="italic"
-                android:textColor="@color/white"
                 android:gravity="bottom"
                 android:textSize="20dp"
                 android:id="@+id/textView" />
@@ -73,12 +72,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:weightSum="1"
+        android:layout_margin="@dimen/margin10"
         >
 
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/east"
+            android:elevation="@dimen/margin5"
             android:layout_weight=".5">
 
             <ImageView
@@ -114,6 +115,8 @@
 
         <FrameLayout
             android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin10"
+            android:elevation="@dimen/margin10"
             android:layout_height="match_parent"
             android:id="@+id/south"
             android:layout_weight=".5">
@@ -152,6 +155,9 @@
 
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin10"
         android:layout_weight=".35"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -195,29 +201,11 @@
             </RelativeLayout>
         </FrameLayout>
 
-        <!-- <ImageButton
-             android:text="West"
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:id="@+id/west"
-             android:src="@drawable/west"
-             android:layout_gravity="bottom"
-             android:scaleType="centerCrop"
-             android:layout_weight=".5" />-->
-
-        <!--<ImageButton
-            android:text="North"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/north"
-            android:src="@drawable/north"
-            android:scaleType="centerCrop"
-            android:layout_weight=".5" />-->
-
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/north"
+            android:layout_marginLeft="@dimen/margin10"
             android:layout_weight=".5">
 
             <ImageView

@@ -1,9 +1,16 @@
 package com.ad.reckittbenckiser.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 import android.widget.ImageView;
@@ -30,15 +37,54 @@ public class LoginActivity extends Activity {
     @Bind(R.id.editPassword)
     EditText editPassword;
 
+    @Bind(R.id.layoutTop)
+    RelativeLayout mRelativeLayoutTop;
 
     private SharedPreferenceManager mSharedPreferenceManager;
+    private int deviceHeight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_activity_design);
         ButterKnife.bind(this);
-
         mSharedPreferenceManager = new SharedPreferenceManager(this);
+        initiateView();
+    }
+
+    private void initiateView(){
+        deviceHeight = Util.getDeviceHeight(this);
+        mRelativeLayoutTop.addView(new MyTopView(this));
+
+        TextView mTextView2 = new TextView(this);
+        mTextView2.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams lay2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        lay2.setMargins(0,40,0,0);
+        lay2.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE);
+        lay2.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+        mTextView2.setText("Login");
+        mTextView2.setTextColor(Color.WHITE);
+        mTextView2.setTextSize(35);
+        mRelativeLayoutTop.addView(mTextView2, lay2);
+    }
+
+    public class MyTopView extends View{
+
+        public MyTopView(Context context) {
+            super(context);
+        }
+
+        @Override
+
+        protected void onDraw(Canvas canvas) {
+            Paint p = new Paint();
+            p.setAntiAlias(true);
+            RectF rectF = new RectF(-100, -deviceHeight/4, Util.getDeviceWidth(LoginActivity.this)+100, deviceHeight/4);
+            p.setColor(getResources().getColor(R.color.primary));
+            canvas.drawArc(rectF, 0, 180, true, p);
+        }
     }
 
     @OnClick(R.id.btnLogin)
