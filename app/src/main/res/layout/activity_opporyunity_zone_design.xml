@@ -8,61 +8,39 @@
 
     <RelativeLayout android:layout_width="match_parent"
         android:layout_weight=".3"
+        android:layout_marginTop="@dimen/margin10"
         android:layout_height="0dp"
         android:orientation="horizontal"
+        android:elevation="@dimen/margin10"
         android:gravity="center_horizontal"
-        android:layout_margin="@dimen/margin20"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
         >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_marginTop="@dimen/margin10"
-            android:layout_marginRight="@dimen/margin5"
-            android:layout_toRightOf="@+id/header"
-            android:id="@+id/profile_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:visibility="gone"
-            android:src="@drawable/graph"
-            app:civ_border_color="#FF000000"/>
+        <ImageView android:layout_width="120dp"
+            android:id="@+id/imageView"
+            android:layout_height="match_parent"
+            android:src="@drawable/header"/>
+
+        <View android:layout_height="5dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/frame"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/header"
-            android:text="Opportunity Analysis Tool"
-            android:singleLine="true"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/margin10"
-            android:ellipsize="end"
-            android:textSize="22dp"
-            />
-
-        <RelativeLayout android:layout_width="match_parent"
+            android:text="A plan for \nbetter business"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_below="@id/header">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/pic"
-                android:layout_marginTop="10dp"
-                android:id="@+id/logo"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                />
-
-            <TextView
-                android:text="A plan for \nbetter business"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/margin20"
-                android:textStyle="italic"
-                android:gravity="bottom"
-                android:textSize="20dp"
-                android:id="@+id/textView" />
-        </RelativeLayout>
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/margin20"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView" />
     </RelativeLayout>
-
 
     <LinearLayout
         android:orientation="horizontal"

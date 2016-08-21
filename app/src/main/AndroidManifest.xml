@@ -27,7 +27,8 @@
         <activity
             android:name=".activities.OpportunityZone"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/PinkHeaderTheme"
+           ></activity>
 
         <activity
             android:name=".activities.TsiListActivity"
