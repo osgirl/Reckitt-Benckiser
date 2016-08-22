@@ -33,7 +33,7 @@ public class DashBoardActivity extends ActionBarActivity implements NavigationDr
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation_drawer);
+        setContentView(R.layout.dashboard_activity_design);
         preferenceManager = new SharedPreferenceManager(this);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
