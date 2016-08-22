@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/light_brinjal"
+        android:background="@color/toolbar_color"
         android:contentInsetEnd="0dp"
         android:contentInsetRight="0dp"
         android:contentInsetStart="0dp"
@@ -32,7 +32,7 @@
             android:id="@+id/ll_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
+            android:background="@color/pink_shade"
             android:clickable="true"
             android:orientation="horizontal"
             android:paddingBottom="10dp"
@@ -53,14 +53,21 @@
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yeshwant Sahu"
+                    android:text="Raipur TSI"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="188.3"
+                    android:text="Agarwal Agency-ph2"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <com.ad.reckittbenckiser.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="49.19"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </LinearLayout>

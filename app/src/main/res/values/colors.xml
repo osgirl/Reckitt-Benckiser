@@ -13,6 +13,7 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+    <color name="toolbar_color">#E91E63</color>
     <!--  <color name="tranparent_pink_circle">#D90ABBED</color>
       <color name="radiation_color">#0ABBED</color>-->
 
@@ -21,7 +22,8 @@
 
     <color name="deep_purple">#B39DDB</color>
     <color name="light_purple">#EDE7F6</color>
-    <color name="purple">#9C27B0</color>
+    <!--<color name="purple">#9C27B0</color>-->
+    <color name="purple">#6C206B</color>
     <color name="pink">#D5328D</color>
 
     <color name="white">#FFFFFF</color>
@@ -31,6 +33,7 @@
     <color name="light_brinjal">#8d6bb3</color>
     <color name="teal_color">#3F81B1</color>
     <color name="pink_shade">#D7328D</color>
+
 
 </resources>
 

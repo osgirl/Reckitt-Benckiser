@@ -1,224 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_white_pattern"
+    android:orientation="vertical"
     android:weightSum="1">
 
-    <RelativeLayout android:layout_width="match_parent"
-        android:layout_weight=".3"
-        android:layout_marginTop="@dimen/margin10"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:elevation="@dimen/margin10"
-        android:gravity="center_horizontal"
-        android:background="@color/white"
         android:layout_marginLeft="@dimen/margin10"
         android:layout_marginRight="@dimen/margin10"
-        >
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_weight=".3"
+        android:background="@color/white"
+        android:elevation="@dimen/margin10"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <ImageView android:layout_width="120dp"
+        <ImageView
             android:id="@+id/imageView"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
-            android:src="@drawable/header"/>
+            android:src="@drawable/header" />
 
-        <View android:layout_height="5dp"
+        <View
             android:layout_width="match_parent"
+            android:layout_height="5dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/frame"/>
+            android:background="@drawable/frame" />
 
         <TextView
-            android:text="A plan for \nbetter business"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textStyle="italic"
-            android:layout_marginLeft="@dimen/margin20"
-            android:gravity="center_vertical"
-            android:textSize="20dp"
-            android:id="@+id/textView"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView" />
+            android:gravity="center_vertical"
+            android:text="A plan for \nbetter business"
+            android:textSize="20dp"
+            android:textStyle="italic" />
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_weight=".35"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:weightSum="1"
         android:layout_margin="@dimen/margin10"
-        >
+        android:layout_weight=".35"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <FrameLayout
+            android:id="@+id/east"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/east"
+            android:layout_weight=".5"
             android:background="@drawable/frame"
-            android:elevation="@dimen/margin15"
-            android:layout_weight=".5">
+            android:elevation="@dimen/margin15">
 
             <ImageView
                 android:id="@+id/eastImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:background="@drawable/east"
-                />
+                android:scaleType="centerCrop" />
 
-            <RelativeLayout android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
-                android:background="#D9FF4081"
-                >
+                android:background="#D9FF4081">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:gravity="left|bottom"
-                    android:layout_marginRight="@dimen/margin40"
                     android:layout_alignParentBottom="true"
-                    android:text="East"
-                    android:textSize="@dimen/txt_size_bottom"
+                    android:layout_marginRight="@dimen/margin40"
                     android:ellipsize="end"
+                    android:gravity="left|bottom"
+                    android:maxLines="2"
                     android:paddingBottom="@dimen/margin10"
-                    android:paddingTop="@dimen/margin5"
                     android:paddingLeft="@dimen/margin5"
                     android:paddingRight="@dimen/margin5"
-                    android:maxLines="2"
-                    android:textColor="@android:color/white"/>
+                    android:paddingTop="@dimen/margin5"
+                    android:text="East"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_size_bottom" />
             </RelativeLayout>
         </FrameLayout>
 
         <FrameLayout
-            android:layout_width="0dp"
-            android:layout_marginLeft="@dimen/margin10"
-            android:elevation="@dimen/margin10"
-            android:layout_height="match_parent"
-            android:background="@drawable/frame"
             android:id="@+id/south"
-            android:layout_weight=".5">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_weight=".5"
+            android:background="@drawable/frame"
+            android:elevation="@dimen/margin10">
 
             <ImageView
                 android:id="@+id/southImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:background="@drawable/south"
-                />
+                android:scaleType="centerCrop" />
 
-            <RelativeLayout android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
-                android:background="#D9FF4081"
-                >
+                android:background="#D9FF4081">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:gravity="left|bottom"
-                    android:layout_marginRight="@dimen/margin40"
                     android:layout_alignParentBottom="true"
-                    android:text="South"
-                    android:textSize="@dimen/txt_size_bottom"
+                    android:layout_marginRight="@dimen/margin40"
                     android:ellipsize="end"
+                    android:gravity="left|bottom"
+                    android:maxLines="2"
                     android:paddingBottom="@dimen/margin10"
-                    android:paddingTop="@dimen/margin5"
                     android:paddingLeft="@dimen/margin5"
                     android:paddingRight="@dimen/margin5"
-                    android:maxLines="2"
-                    android:textColor="@android:color/white"/>
+                    android:paddingTop="@dimen/margin5"
+                    android:text="South"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_size_bottom" />
             </RelativeLayout>
         </FrameLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginLeft="@dimen/margin10"
-        android:layout_marginRight="@dimen/margin10"
-        android:layout_marginBottom="@dimen/margin10"
-        android:layout_weight=".35"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:weightSum="1"
-        >
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_weight=".35"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <FrameLayout
+            android:id="@+id/west"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight=".5"
             android:background="@drawable/frame"
-            android:elevation="@dimen/margin10"
-            android:id="@+id/west"
-            android:layout_weight=".5">
+            android:elevation="@dimen/margin10">
 
             <ImageView
                 android:id="@+id/westImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:background="@drawable/west"
-                />
+                android:scaleType="centerCrop" />
 
-            <RelativeLayout android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
-                android:background="#D9FF4081"
-                >
+                android:background="#D9FF4081">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:gravity="left|bottom"
-                    android:layout_marginRight="@dimen/margin40"
                     android:layout_alignParentBottom="true"
-                    android:text="West"
-                    android:textSize="@dimen/txt_size_bottom"
+                    android:layout_marginRight="@dimen/margin40"
                     android:ellipsize="end"
+                    android:gravity="left|bottom"
+                    android:maxLines="2"
                     android:paddingBottom="@dimen/margin10"
-                    android:paddingTop="@dimen/margin5"
                     android:paddingLeft="@dimen/margin5"
                     android:paddingRight="@dimen/margin5"
-                    android:maxLines="2"
-                    android:textColor="@android:color/white"/>
+                    android:paddingTop="@dimen/margin5"
+                    android:text="West"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_size_bottom" />
             </RelativeLayout>
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/north"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/north"
-            android:elevation="@dimen/margin10"
-            android:background="@drawable/frame"
             android:layout_marginLeft="@dimen/margin10"
-            android:layout_weight=".5">
+            android:layout_weight=".5"
+            android:background="@drawable/frame"
+            android:elevation="@dimen/margin10">
 
             <ImageView
                 android:id="@+id/imageStory1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:background="@drawable/north"
-                />
+                android:scaleType="centerCrop" />
 
-            <RelativeLayout android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
-                android:background="#D9FF4081"
-                >
+                android:background="#D9FF4081">
+
                 <TextView
                     android:id="@+id/txtStory1Title"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:gravity="left|bottom"
-                    android:layout_marginRight="@dimen/margin40"
                     android:layout_alignParentBottom="true"
-                    android:text="North"
-                    android:textSize="@dimen/txt_size_bottom"
+                    android:layout_marginRight="@dimen/margin40"
                     android:ellipsize="end"
+                    android:gravity="left|bottom"
+                    android:maxLines="2"
                     android:paddingBottom="@dimen/margin10"
-                    android:paddingTop="@dimen/margin5"
                     android:paddingLeft="@dimen/margin5"
                     android:paddingRight="@dimen/margin5"
-                    android:maxLines="2"
-                    android:textColor="@android:color/white"/>
+                    android:paddingTop="@dimen/margin5"
+                    android:text="North"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt_size_bottom" />
             </RelativeLayout>
         </FrameLayout>
 

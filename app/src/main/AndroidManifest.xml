@@ -27,18 +27,17 @@
         <activity
             android:name=".activities.OpportunityZone"
             android:screenOrientation="portrait"
-            android:theme="@style/PinkHeaderTheme"
-           ></activity>
+            android:theme="@style/PinkHeaderTheme"></activity>
 
         <activity
             android:name=".activities.TsiListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
 
-        <activity android:name=".activities.DashBoardActivity"
-            android:theme="@style/HomeTheme"
-            android:screenOrientation="portrait">
-        </activity>
+        <activity
+            android:name=".activities.DashBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
 
         <activity
             android:name=".activities.DistributorListActivity"
@@ -52,6 +51,11 @@
 
         <activity
             android:name=".activities.StoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <activity
+            android:name=".activities.ProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
     </application>
