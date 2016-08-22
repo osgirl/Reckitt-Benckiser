@@ -1,5 +1,6 @@
 package com.ad.reckittbenckiser.utils;
 
+import com.ad.reckittbenckiser.vo.ASMInfo;
 import com.ad.reckittbenckiser.vo.DbsrInfo;
 import com.ad.reckittbenckiser.vo.DistributorInfo;
 import com.ad.reckittbenckiser.vo.StoreInfo;
@@ -24,6 +25,14 @@ public class Constants {
         tsiInfos.add(new TSIInfo("RAIPUR ASE", "URBAN", "31.8%", "222.2", "106.9"));
 
         return tsiInfos;
+    }
+
+    public static List<ASMInfo> getASMList() {
+
+        List<ASMInfo> asmInfoList = new ArrayList<>();
+        asmInfoList.add(new ASMInfo("NORTH BENGAL", "10.4%", "13.6%", "762", "29"));
+        asmInfoList.add(new ASMInfo("CHHATTISGARH", "14.1", "4.9%", "1339", "86"));
+        return asmInfoList;
     }
 
     public static List<DistributorInfo> getDistributorList() {

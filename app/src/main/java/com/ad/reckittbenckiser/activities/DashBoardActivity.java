@@ -18,7 +18,7 @@ import com.ad.reckittbenckiser.utils.SharedPreferenceManager;
  * Created by Shiva.Bansal on 8/19/2016.
  */
 
-public class HomeActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class DashBoardActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     NavigationDrawerFragment mNavigationDrawerFragment;
     DrawerLayout drawerLayout;
