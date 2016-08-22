@@ -26,6 +26,7 @@
 
     <color name="white">#FFFFFF</color>
     <color name="light_blue_grey">#CFD8DC</color>
+    <color name="light_pink_grey">#D9FFAFCA</color>
     <color name="brinjal">#67478A</color>
     <color name="light_brinjal">#8d6bb3</color>
     <color name="teal_color">#3F81B1</color>
