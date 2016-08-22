@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.adapter.StoreListAdapter;
@@ -40,8 +42,16 @@ public class StoreActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
+
+     /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        View logo = getLayoutInflater().inflate(R.layout.action_bar_view, null);
+        toolbar.addView(logo);*/
+
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+
         storeRecyclerView.setLayoutManager(llm);
         storeListAdapter = new StoreListAdapter(this, storeInfoList);
         storeRecyclerView.setAdapter(storeListAdapter);

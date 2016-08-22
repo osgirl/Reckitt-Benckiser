@@ -4,9 +4,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +11,11 @@ import android.view.ViewGroup;
 import com.ad.reckittbenckiser.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,20 +28,54 @@ public class ZonePerformanceFragment extends Fragment {
     @Bind(R.id.chart)
     PieChart mChart;
 
+    @Bind(R.id.unbilledChart)
+    PieChart mUnbilledChart;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.zone_performace_fragment, null);
         ButterKnife.bind(this, view);
 
-        initiateView();
+        initiateBilledStoresChart();
+        initiateUnBilledStoresChart();
         return view;
     }
 
-    private void initiateView(){
-        mChart.setDescription("Opportunity(Lakhs) from Billed Stores");
-        mChart.setCenterText(generateCenterText());
-        mChart.setCenterTextSize(14f);
+    private void initiateUnBilledStoresChart(){
+        mUnbilledChart.setDescription("");
+        mUnbilledChart.setCenterText("Total 510");
+        mUnbilledChart.setCenterTextSize(12f);
+
+        // radius of the center hole in percent of maximum radius
+        mUnbilledChart.setHoleRadius(45f);
+        mUnbilledChart.setTransparentCircleRadius(50f);
+
+        Legend l = mUnbilledChart.getLegend();
+        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+        mUnbilledChart.setData(generateUnBilledStoreData());
+    }
+
+    private PieData generateUnBilledStoreData() {
+        ArrayList<PieEntry> entries1 = new ArrayList<PieEntry>();
+
+        entries1.add(new PieEntry((float) 121 , "Urban"));
+        entries1.add(new PieEntry((float) 389, "Rural"));
+
+        PieDataSet ds1 = new PieDataSet(entries1, "");
+        ds1.setColors(VORDIPLOM_COLORS);
+        ds1.setSliceSpace(2f);
+        ds1.setValueTextColor(Color.WHITE);
+        ds1.setValueTextSize(12f);
+
+        PieData d = new PieData(ds1);
+        return d;
+    }
+
+    private void initiateBilledStoresChart(){
+        mChart.setDescription("");
+        mChart.setCenterText("Total 583");
+        mChart.setCenterTextSize(12f);
 
         // radius of the center hole in percent of maximum radius
         mChart.setHoleRadius(45f);
@@ -55,25 +83,17 @@ public class ZonePerformanceFragment extends Fragment {
 
         Legend l = mChart.getLegend();
         l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-        mChart.setData(generatePieData());
+        mChart.setData(generateBilledStoreData());
     }
 
-    private SpannableString generateCenterText() {
-        SpannableString s = new SpannableString("Total 583.7");
-        s.setSpan(new RelativeSizeSpan(2f), 0, 11, 0);
-        s.setSpan(new ForegroundColorSpan(Color.GRAY), 11, s.length(), 0);
-        return s;
-    }
-
-
-    protected PieData generatePieData() {
+    private PieData generateBilledStoreData() {
         ArrayList<PieEntry> entries1 = new ArrayList<PieEntry>();
 
         entries1.add(new PieEntry(225 , "Rural"));
-        entries1.add(new PieEntry((float) 358.6, "Urban"));
+        entries1.add(new PieEntry((float) 358, "Urban"));
 
         PieDataSet ds1 = new PieDataSet(entries1, "");
-        ds1.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        ds1.setColors(SECOND_CHART);
         ds1.setSliceSpace(2f);
         ds1.setValueTextColor(Color.WHITE);
         ds1.setValueTextSize(12f);
@@ -83,5 +103,8 @@ public class ZonePerformanceFragment extends Fragment {
     }
 
     public static final int[] VORDIPLOM_COLORS = {
-            Color.rgb(248, 187, 208), Color.rgb(255, 247, 140)};
+            Color.rgb(179,157,219), Color.rgb(233, 53, 145)};
+
+    public static final int[] SECOND_CHART = {
+            Color.rgb(215, 50, 147), Color.rgb(141,107,179)};
 }
