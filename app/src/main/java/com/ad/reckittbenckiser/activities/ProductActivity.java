@@ -6,9 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.ad.reckittbenckiser.R;
+import com.ad.reckittbenckiser.adapter.ProductListAdapter;
 import com.ad.reckittbenckiser.adapter.StoreListAdapter;
 import com.ad.reckittbenckiser.utils.AppConfig;
 import com.ad.reckittbenckiser.utils.Constants;
+import com.ad.reckittbenckiser.vo.ProductInfo;
 import com.ad.reckittbenckiser.vo.StoreInfo;
 
 import java.util.List;
@@ -17,24 +19,24 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Laxmi.Khatri on 8/20/2016.
+ * Created by laxmi.khatri on 8/22/2016.
  */
-public class StoreActivity extends AppCompatActivity {
+public class ProductActivity extends AppCompatActivity {
 
-    @Bind(R.id.activity_store_list_rv)
-    RecyclerView storeRecyclerView;
+    @Bind(R.id.activity_product_list_rv)
+    RecyclerView productRecyclerView;
 
-    StoreListAdapter storeListAdapter;
+    ProductListAdapter productListAdapter;
 
-    List<StoreInfo> storeInfoList;
+    List<ProductInfo> productInfoList;
 
-    private String TAG = AppConfig.BaseTag + "." + StoreActivity.class.getSimpleName();
+    private String TAG = AppConfig.BaseTag + "." + ProductActivity.class.getSimpleName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
-        storeInfoList = Constants.getStoreList();
+        productInfoList = Constants.getProductList();
         ButterKnife.bind(this);
         initViewAndAdapter();
     }
@@ -42,8 +44,8 @@ public class StoreActivity extends AppCompatActivity {
     private void initViewAndAdapter() {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-        storeRecyclerView.setLayoutManager(llm);
-        storeListAdapter = new StoreListAdapter(this, storeInfoList);
-        storeRecyclerView.setAdapter(storeListAdapter);
+        productRecyclerView.setLayoutManager(llm);
+        productListAdapter = new ProductListAdapter(this, productInfoList);
+        productRecyclerView.setAdapter(productListAdapter);
     }
 }

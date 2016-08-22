@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/light_brinjal"
+        android:background="@color/toolbar_color"
         android:contentInsetEnd="0dp"
         android:contentInsetRight="0dp"
         android:contentInsetStart="0dp"

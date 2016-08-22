@@ -3,6 +3,7 @@ package com.ad.reckittbenckiser.utils;
 import com.ad.reckittbenckiser.vo.ASMInfo;
 import com.ad.reckittbenckiser.vo.DbsrInfo;
 import com.ad.reckittbenckiser.vo.DistributorInfo;
+import com.ad.reckittbenckiser.vo.ProductInfo;
 import com.ad.reckittbenckiser.vo.StoreInfo;
 import com.ad.reckittbenckiser.vo.TSIInfo;
 
@@ -66,5 +67,20 @@ public class Constants {
         storeInfos.add(new StoreInfo("Rest", "408.8%", "0.05"));
 
         return storeInfos;
+    }
+
+    public static List<ProductInfo> getProductList() {
+        List<ProductInfo> productInfos = new ArrayList<>();
+        productInfos.add(new ProductInfo("DETTOL SOAP", "-95.1%", "3.20"));
+        productInfos.add(new ProductInfo("DETTOL HANDWASH", "-95.3%", "0.43"));
+        productInfos.add(new ProductInfo("HARPIC", "-39.2%", "3.79"));
+        productInfos.add(new ProductInfo("LIZOL", "-89.1%", "2.06"));
+        productInfos.add(new ProductInfo("MORTEIN", "-83.3%", "0.32"));
+        productInfos.add(new ProductInfo("VEET", "0.0%", "0.09"));
+        productInfos.add(new ProductInfo("HEALTHCARE", "383.5%", "0.12"));
+        productInfos.add(new ProductInfo("SWB", "0.0%", "0.00"));
+        productInfos.add(new ProductInfo("OTHERS", "-71.1%", "0.82"));
+
+        return productInfos;
     }
 }
