@@ -40,7 +40,7 @@ public class AsmPerformanceFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.zone_performace_fragment, null);
+        View view = inflater.inflate(R.layout.asm_performance_fragment, null);
         ButterKnife.bind(this, view);
 
         initiateBilledStoresChart();

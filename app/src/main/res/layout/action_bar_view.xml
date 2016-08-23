@@ -23,13 +23,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RB"
+        android:text="ZONE LEVEL OPPORTUNITY ANALYSIS"
         android:gravity="center"
         android:id="@+id/groupName"
         android:singleLine="true"
         android:ellipsize="end"
-        android:layout_marginRight="100dp"
-        android:textSize="15dp"
+        android:layout_marginRight="50dp"
+        android:textSize="14dp"
         android:layout_centerInParent="true"
         android:textColor="@color/icons"/>
 

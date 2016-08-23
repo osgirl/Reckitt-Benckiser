@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.adapter.DbsrListAdapter;
@@ -28,9 +29,13 @@ public class DbsrActivity extends AppCompatActivity {
     @Bind(R.id.activity_dbsr_list_rv)
     RecyclerView dbsrRecyclerView;
 
+    @Bind(R.id.tv_toolbar_title)
+    TextView tv_toolbar_title;
+
     DbsrListAdapter dbsrListAdapter;
 
     List<DbsrInfo> dbsrInfoList;
+
 
     private String TAG = AppConfig.BaseTag + "." + DbsrActivity.class.getSimpleName();
 
@@ -44,6 +49,7 @@ public class DbsrActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
+        tv_toolbar_title.setText("Raipur TSI --> Agarwal Agency");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         dbsrRecyclerView.setLayoutManager(llm);
