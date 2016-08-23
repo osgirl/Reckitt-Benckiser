@@ -16,6 +16,7 @@ import com.ad.reckittbenckiser.fragments.tsilevelopportunity.DistributorListFrag
 import com.ad.reckittbenckiser.fragments.tsilevelopportunity.TsiPerformanceFragment;
 import com.ad.reckittbenckiser.utils.AppConfig;
 import com.ad.reckittbenckiser.utils.Tracer;
+import com.ad.reckittbenckiser.views.CustomTextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,6 +35,9 @@ public class DistributorListActivity extends AppCompatActivity {
     @Bind(R.id.tabs)
     TabLayout tabLayout;
 
+    @Bind(R.id.tv_toolbar_title)
+    CustomTextView tvTitle;
+
     private String TAG = AppConfig.BaseTag + "." + DistributorListActivity.class.getSimpleName();
 
     String Titles[] = {"Overall Performance", "Distributor List"};
@@ -50,6 +54,7 @@ public class DistributorListActivity extends AppCompatActivity {
         Tracer.info(TAG, "DistributorListActivity().init()");
         // Creating The Toolbar and setting it as the Toolbar for the activity
         setSupportActionBar(toolbar);
+        tvTitle.setText("RAIPUR TSI OPPORTUNITY");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         setupViewPager();
 

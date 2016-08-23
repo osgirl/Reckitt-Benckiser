@@ -52,6 +52,11 @@ public class DistributorListAdapter extends RecyclerView.Adapter<DistributorList
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
         }
+        if (position == 0) {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
+        } else {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
+        }
         holder.llContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

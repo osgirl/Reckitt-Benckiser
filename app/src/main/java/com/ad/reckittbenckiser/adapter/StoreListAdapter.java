@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.activities.DbsrActivity;
+import com.ad.reckittbenckiser.activities.ProductActivity;
+import com.ad.reckittbenckiser.activities.StoreActivity;
 import com.ad.reckittbenckiser.views.CustomTextView;
 import com.ad.reckittbenckiser.vo.DbsrInfo;
 import com.ad.reckittbenckiser.vo.StoreInfo;
@@ -51,6 +53,21 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
         }
+        if (position == 0 || position == 3) {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
+        } else {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
+        }
+
+        holder.llContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position == 0) {
+                    Intent intent = new Intent(mContext, ProductActivity.class);
+                    mContext.startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override

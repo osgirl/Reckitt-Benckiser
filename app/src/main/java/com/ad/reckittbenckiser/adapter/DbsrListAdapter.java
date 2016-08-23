@@ -52,6 +52,11 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
         }
+        if (position == 1 || position == 3 || position == 4 || position == 5) {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
+        } else {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
+        }
         holder.llContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -38,9 +38,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:paddingBottom="10dp"
-                android:gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="5dp"
                 android:paddingTop="10dp">
@@ -49,24 +49,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Agarwal Agency"
-                    app:font="@string/omens_bold"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    app:font="@string/omens_bold" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="@dimen/margin10"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
                     android:text="124-C Agarwal Agency-ph2, Raipur"
                     android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:font="@string/omens_regular" />
 
-                <com.ad.reckittbenckiser.views.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="49.19"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Opportunity "
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:font="@string/omens_regular" />
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="70.17"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:font="@string/omens_bold" />
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
         </LinearLayout>
