@@ -49,6 +49,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
         }
+        if (position == 0 || position == 1 || position == 2 || position == 3 || position == 4 || position == 8) {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
+        } else {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
+        }
+
     }
 
     @Override

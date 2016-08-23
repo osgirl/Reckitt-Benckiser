@@ -49,7 +49,7 @@ public class DbsrActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
-        tv_toolbar_title.setText("Raipur TSI --> Agarwal Agency");
+        tv_toolbar_title.setText("DBSR/PSR LEVEL OPPORTUNUTY");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         dbsrRecyclerView.setLayoutManager(llm);

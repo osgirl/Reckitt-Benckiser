@@ -17,6 +17,8 @@
     <color name="divider">#BDBDBD</color>
     <color name="toolbar_color">#AD1457</color>
     <color name="tab_color">#C51162</color>
+    <color name="red_color">#F44336</color>
+    <color name="green_color">#43A047</color>
     <!--  <color name="tranparent_pink_circle">#D90ABBED</color>
       <color name="radiation_color">#0ABBED</color>-->
 

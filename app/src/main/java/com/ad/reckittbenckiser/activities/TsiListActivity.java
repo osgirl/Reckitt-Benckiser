@@ -12,6 +12,7 @@ import com.ad.reckittbenckiser.fragments.asmlevelopportunity.AsmPerformanceFragm
 import com.ad.reckittbenckiser.fragments.asmlevelopportunity.TsiListFragment;
 import com.ad.reckittbenckiser.utils.AppConfig;
 import com.ad.reckittbenckiser.utils.Tracer;
+import com.ad.reckittbenckiser.views.CustomTextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,9 +31,12 @@ public class TsiListActivity extends AppCompatActivity {
     @Bind(R.id.tabs)
     TabLayout tabLayout;
 
+    @Bind(R.id.tv_toolbar_title)
+    CustomTextView tvTitle;
+
     private String TAG = AppConfig.BaseTag + "." + TsiListActivity.class.getSimpleName();
 
-    String Titles[] = {"ASM Performance", "TSI list"};
+    String Titles[] = {"Overall Performance", "TSI list"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,7 @@ public class TsiListActivity extends AppCompatActivity {
         Tracer.info(TAG, "TsiListActivity().init()");
         // Creating The Toolbar and setting it as the Toolbar for the activity
         setSupportActionBar(toolbar);
-        setTitle("ASM LEVEL OPPORTUNITY");
+        tvTitle.setText("NORTH BENGAL OPPORTUNITY");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         setupViewPager();
 

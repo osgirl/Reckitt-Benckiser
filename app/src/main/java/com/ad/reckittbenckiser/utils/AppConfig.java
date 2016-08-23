@@ -6,8 +6,8 @@ package com.ad.reckittbenckiser.utils;
 
 public class AppConfig {
 
-    public static String USER_EMAIL = "bansal.shiva45@gmail.com";
-    public static String USER_PASSWORD = "shiva123";
+    public static String USER_EMAIL = "demouser@gmail.com";
+    public static String USER_PASSWORD = "abc@123";
     public static String USER_NAME = "";
 
     /**

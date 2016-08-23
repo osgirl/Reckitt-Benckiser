@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.adapter.StoreListAdapter;
@@ -25,6 +26,9 @@ public class StoreActivity extends AppCompatActivity {
 
     @Bind(R.id.activity_store_list_rv)
     RecyclerView storeRecyclerView;
+
+    @Bind(R.id.tv_toolbar_title)
+    TextView tv_toolbar_title;
 
     StoreListAdapter storeListAdapter;
 
@@ -48,7 +52,7 @@ public class StoreActivity extends AppCompatActivity {
 
         View logo = getLayoutInflater().inflate(R.layout.action_bar_view, null);
         toolbar.addView(logo);*/
-
+        tv_toolbar_title.setText("STORE CLASS LEVEL OPPORTUNUTY");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
