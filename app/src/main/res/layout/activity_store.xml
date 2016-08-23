@@ -48,14 +48,16 @@
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Raipur TSI"
+                    android:text="YESHUWANT SAHU"
                     android:textColor="@color/white"
+                    app:font="@string/omens_bold"
                     android:textSize="18sp" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Agarwal Agency-ph2"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="12/J opp mall durga nagar, Raipur"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 

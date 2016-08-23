@@ -25,7 +25,7 @@
             android:id="@+id/ll_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/pink_shade"
+            android:background="@color/brinjal"
             android:clickable="true"
             android:orientation="horizontal">
 
@@ -37,9 +37,10 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:paddingBottom="10dp"
+                android:gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="5dp"
                 android:paddingTop="10dp">
@@ -48,11 +49,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Agarwal Agency"
+                    app:font="@string/omens_bold"
                     android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
                     android:layout_height="wrap_content"
                     android:text="124-C Agarwal Agency-ph2, Raipur"
                     android:textColor="@color/white"
