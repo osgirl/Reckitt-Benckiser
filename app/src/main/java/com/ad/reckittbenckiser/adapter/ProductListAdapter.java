@@ -32,7 +32,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     @Override
     public ProductListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.store_list_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_list_row, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -41,9 +41,9 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         final ProductInfo productInfo = mProductList.get(position);
 
-        holder.tvStoreName.setText(productInfo.getProductName());
+        holder.tvProductName.setText(productInfo.getProductName());
         holder.tvGrowth.setText(productInfo.getGrowth());
-        holder.tvOpp.setText(productInfo.getOpportunity());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + productInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {
@@ -73,8 +73,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         @Bind(R.id.view)
         View view;
 
-        @Bind(R.id.tv_store_name)
-        CustomTextView tvStoreName;
+        @Bind(R.id.tv_product_name)
+        CustomTextView tvProductName;
 
         @Bind(R.id.tv_growth)
         CustomTextView tvGrowth;

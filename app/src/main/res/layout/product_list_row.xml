@@ -30,7 +30,7 @@
             android:orientation="vertical">
 
             <com.ad.reckittbenckiser.views.CustomTextView
-                android:id="@+id/tv_store_name"
+                android:id="@+id/tv_product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -52,7 +52,7 @@
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Growth  "
+                    android:text="Growth "
                     android:textSize="15sp"
                     app:font="@string/omens_regular" />
 
@@ -102,39 +102,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/white"></View>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@color/brinjal"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_product"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/button1"
-                    android:layout_weight="0.5"
-                    android:text="Opporutnity By Product"
-                    android:textColor="@color/white" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="60dp"
-                    android:background="@color/white"></View>
-
-
-                <Button
-                    android:id="@+id/btn_outlet"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="Opporutnity By Outlet"
-                    android:textColor="@color/white" />
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
