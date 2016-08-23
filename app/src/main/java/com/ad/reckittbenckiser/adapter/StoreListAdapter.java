@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
@@ -47,7 +48,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
 
         holder.tvStoreName.setText(storeInfo.getStoreName());
         holder.tvGrowth.setText(storeInfo.getGrowth());
-        holder.tvOpp.setText(storeInfo.getOpportunity());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + storeInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {
@@ -59,7 +60,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
         }
 
-        holder.llContainer.setOnClickListener(new View.OnClickListener() {
+        holder.btnProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (position == 0) {
@@ -94,6 +95,9 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
 
         @Bind(R.id.tv_opp)
         CustomTextView tvOpp;
+
+        @Bind(R.id.btn_product)
+        Button btnProduct;
 
         public ViewHolder(View v) {
             super(v);

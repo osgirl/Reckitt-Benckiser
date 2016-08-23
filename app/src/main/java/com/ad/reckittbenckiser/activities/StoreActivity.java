@@ -14,6 +14,8 @@ import com.ad.reckittbenckiser.utils.AppConfig;
 import com.ad.reckittbenckiser.utils.Constants;
 import com.ad.reckittbenckiser.vo.StoreInfo;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import butterknife.Bind;
@@ -29,6 +31,9 @@ public class StoreActivity extends AppCompatActivity {
 
     @Bind(R.id.tv_toolbar_title)
     TextView tv_toolbar_title;
+
+    @Bind(R.id.tv_opp)
+    TextView tvOpp;
 
     StoreListAdapter storeListAdapter;
 
@@ -53,6 +58,7 @@ public class StoreActivity extends AppCompatActivity {
         View logo = getLayoutInflater().inflate(R.layout.action_bar_view, null);
         toolbar.addView(logo);*/
         tv_toolbar_title.setText("STORE CLASS LEVEL OPPORTUNITY");
+        tvOpp.setText(getString(R.string.rs) + "49.19");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 

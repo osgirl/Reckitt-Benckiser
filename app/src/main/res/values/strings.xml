@@ -22,4 +22,6 @@
     <string name="omens_regular">omnes-regular.otf</string>
     <string name="omens_bold">omnes-bold.otf</string>
     <string name="omens_light_italic">omnes-lightitalic.otf</string>
+
+    <string name="rs">\u20B9</string>
 </resources>
