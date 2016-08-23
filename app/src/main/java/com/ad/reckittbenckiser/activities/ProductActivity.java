@@ -46,7 +46,7 @@ public class ProductActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
-        tv_toolbar_title.setText("STORE CLASS LEVEL OPPORTUNUTY");
+        tv_toolbar_title.setText("OPPORTUNITY BY PRODUCT");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         productRecyclerView.setLayoutManager(llm);

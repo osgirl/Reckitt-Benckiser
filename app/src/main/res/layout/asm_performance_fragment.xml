@@ -23,7 +23,7 @@
 
         <com.ad.reckittbenckiser.views.CustomTextView
             android:id="@+id/storyTitle"
-            android:text="North Bengel"
+            android:text="North Bengal"
             app:font="@string/omens_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

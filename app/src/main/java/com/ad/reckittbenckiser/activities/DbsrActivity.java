@@ -36,7 +36,6 @@ public class DbsrActivity extends AppCompatActivity {
 
     List<DbsrInfo> dbsrInfoList;
 
-
     private String TAG = AppConfig.BaseTag + "." + DbsrActivity.class.getSimpleName();
 
     @Override
@@ -49,7 +48,7 @@ public class DbsrActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
-        tv_toolbar_title.setText("DBSR/PSR LEVEL OPPORTUNUTY");
+        tv_toolbar_title.setText("DBSR/PSR LEVEL OPPORTUNITY");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         dbsrRecyclerView.setLayoutManager(llm);

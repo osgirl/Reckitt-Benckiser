@@ -28,7 +28,7 @@
             android:layout_width="@dimen/margin45"
             android:src="@drawable/back"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginLeft="@dimen/margin10"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             />
