@@ -33,6 +33,12 @@ public class Constants {
         List<ASMInfo> asmInfoList = new ArrayList<>();
         asmInfoList.add(new ASMInfo("NORTH BENGAL", "10.4%", "13.6%", "762", "29"));
         asmInfoList.add(new ASMInfo("CHHATTISGARH", "14.1", "4.9%", "1339", "86"));
+        asmInfoList.add(new ASMInfo("NORTH EAST", "18.4%", "17.6%", "34", "29"));
+        asmInfoList.add(new ASMInfo("BIHAR", "24.1", "14.9%", "139", "89"));
+        asmInfoList.add(new ASMInfo("NORTH BIHAR", "14.4%", "18.6%", "732", "60"));
+        asmInfoList.add(new ASMInfo("ORISSA", "17.1", "5.9%", "39", "80"));
+        asmInfoList.add(new ASMInfo("SOUTH BENGAL", "15.4%", "19.6%", "32", "69"));
+        asmInfoList.add(new ASMInfo("CALCUTTA", "19.1", "5.9%", "639", "66"));
         return asmInfoList;
     }
 

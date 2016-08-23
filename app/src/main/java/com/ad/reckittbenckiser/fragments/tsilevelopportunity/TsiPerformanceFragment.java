@@ -35,7 +35,6 @@ public class TsiPerformanceFragment extends Fragment {
     @Bind(R.id.unbilledChart)
     PieChart mUnbilledChart;
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

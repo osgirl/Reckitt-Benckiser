@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin40"
-            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin20"
             android:textColor="@color/primary_text"
             android:textSize="20dp" />
 
@@ -40,6 +40,17 @@
             android:layout_marginRight="@dimen/margin20"
             android:layout_marginTop="@dimen/margin10"
             android:background="@color/primary_text" />
+
+
+        <ImageView
+            android:id="@+id/storeCoverage"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_height="200dp"
+            android:background="@drawable/chart"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:layout_width="wrap_content"
