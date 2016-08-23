@@ -44,33 +44,27 @@
                 android:id="@+id/ll_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/light_purple"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                <com.ad.reckittbenckiser.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Growth "
+                    android:textSize="13sp"
+                    app:font="@string/omens_regular" />
 
-                    <com.ad.reckittbenckiser.views.CustomTextView
-                        android:id="@+id/tv_growth"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3.0%"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="15sp"
-                        app:font="@string/omens_regular" />
+                <com.ad.reckittbenckiser.views.CustomTextView
+                    android:id="@+id/tv_growth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.0%"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    app:font="@string/omens_regular" />
 
-                    <com.ad.reckittbenckiser.views.CustomTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Growth"
-                        android:textSize="13sp"
-                        app:font="@string/omens_regular" />
-                </LinearLayout>
             </LinearLayout>
 
             <View

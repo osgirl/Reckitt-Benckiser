@@ -32,7 +32,7 @@ public class TsiListActivity extends AppCompatActivity {
 
     private String TAG = AppConfig.BaseTag + "." + TsiListActivity.class.getSimpleName();
 
-    String Titles[] = {"Overall Performance", "TSI list"};
+    String Titles[] = {"ASM Performance", "TSI list"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class TsiListActivity extends AppCompatActivity {
         Tracer.info(TAG, "TsiListActivity().init()");
         // Creating The Toolbar and setting it as the Toolbar for the activity
         setSupportActionBar(toolbar);
+        setTitle("ASM LEVEL OPPORTUNITY");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         setupViewPager();
 
