@@ -52,6 +52,11 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         }
+        if (position == 2) {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
+        } else {
+            holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
+        }
         holder.llContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
