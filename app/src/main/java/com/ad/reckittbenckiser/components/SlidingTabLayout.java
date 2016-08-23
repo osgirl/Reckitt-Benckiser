@@ -194,11 +194,11 @@ public class SlidingTabLayout extends HorizontalScrollView {
                 tabView.setSelected(true);
             }
 
-            if(!tabView.isSelected()){
+            /*if(!tabView.isSelected()){
                 tabView.setBackgroundColor(getResources().getColor(R.color.primary_text));
             } else{
                 tabView.setBackgroundColor(getResources().getColor(R.color.icons));
-            }
+            }*/
         }
     }
 
@@ -277,11 +277,11 @@ public class SlidingTabLayout extends HorizontalScrollView {
             for (int i = 0; i < mTabStrip.getChildCount(); i++) {
                 mTabStrip.getChildAt(i).setSelected(position == i);
 
-                if(!mTabStrip.getChildAt(i).isSelected()){
+               /* if(!mTabStrip.getChildAt(i).isSelected()){
                     mTabStrip.getChildAt(i).setBackgroundColor(getResources().getColor(R.color.primary_text));
                 } else{
                     mTabStrip.getChildAt(i).setBackgroundColor(getResources().getColor(R.color.icons));
-                }
+                }*/
             }
             if (mViewPagerPageChangeListener != null) {
                 mViewPagerPageChangeListener.onPageSelected(position);
