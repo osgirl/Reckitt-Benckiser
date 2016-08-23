@@ -22,6 +22,8 @@ public class OpportunityZone extends AppCompatActivity {
     @Bind(R.id.east)
     FrameLayout eastLayout;
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

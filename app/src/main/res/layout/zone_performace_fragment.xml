@@ -6,7 +6,6 @@
     android:background="@drawable/app_white_pattern"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:id="@+id/rootLayout"
         android:layout_width="match_parent"
@@ -40,17 +39,6 @@
             android:layout_marginRight="@dimen/margin20"
             android:layout_marginTop="@dimen/margin10"
             android:background="@color/primary_text" />
-
-
-        <ImageView
-            android:id="@+id/storeCoverage"
-            android:layout_marginTop="@dimen/margin20"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/margin10"
-            android:layout_marginRight="@dimen/margin10"
-            android:layout_height="200dp"
-            android:background="@drawable/chart"
-            android:scaleType="centerCrop" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -123,7 +111,7 @@
                             <com.ad.reckittbenckiser.views.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Monthly Growth"
+                                android:text="Monthly - Jul'16"
                                 android:textColor="@color/secondary_text"
                                 android:textSize="13sp"
                                 app:font="@string/omens_regular" />
@@ -148,7 +136,7 @@
                             <com.ad.reckittbenckiser.views.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Quater Growth"
+                                android:text="QTD"
                                 android:textColor="@color/secondary_text"
                                 android:textSize="13sp"
                                 app:font="@string/omens_regular" />
@@ -258,6 +246,38 @@
             android:layout_width="300dp"
             android:layout_height="300dp" />
 
-    </LinearLayout>
+        <com.ad.reckittbenckiser.views.CustomTextView
+            android:text="East region store segment"
+            app:font="@string/omens_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginRight="@dimen/margin40"
+            android:layout_marginTop="@dimen/margin20"
+            android:textColor="@color/primary_text"
+            android:textSize="20dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin20"
+            android:text=" The store coverage has dipped by 9% y-o-y."
+            android:textColor="@color/secondary_text"
+            />
+
+        <ImageView
+            android:id="@+id/storeCoverage"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_height="200dp"
+            android:layout_marginBottom="@dimen/margin20"
+            android:background="@drawable/chart"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
 </ScrollView>

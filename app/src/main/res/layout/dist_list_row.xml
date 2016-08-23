@@ -36,9 +36,9 @@
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="Raipur Tsi"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_text"
                 android:textSize="20sp"
-                app:font="@string/omens_bold" />
+                app:font="@string/omens_medium" />
 
             <LinearLayout
                 android:id="@+id/ll_data"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="168.6"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/primary_text"
                     android:textSize="18sp"
                     app:font="@string/omens_bold" />
 
