@@ -58,7 +58,7 @@ public class StoreActivity extends AppCompatActivity {
         View logo = getLayoutInflater().inflate(R.layout.action_bar_view, null);
         toolbar.addView(logo);*/
         tv_toolbar_title.setText("STORE CLASS LEVEL OPPORTUNITY");
-        tvOpp.setText(getString(R.string.rs) + "49.19");
+        tvOpp.setText(getString(R.string.rs) + "49.19L");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
