@@ -20,6 +20,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Laxmi.Khatri on 8/20/2016.
@@ -52,12 +53,7 @@ public class StoreActivity extends AppCompatActivity {
 
     private void initViewAndAdapter() {
 
-     /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        View logo = getLayoutInflater().inflate(R.layout.action_bar_view, null);
-        toolbar.addView(logo);*/
-        tv_toolbar_title.setText("STORE CLASS LEVEL OPPORTUNITY");
+        tv_toolbar_title.setText("OPPORTUNITY BY STORE");
         tvOpp.setText(getString(R.string.rs) + "49.19");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -65,5 +61,10 @@ public class StoreActivity extends AppCompatActivity {
         storeRecyclerView.setLayoutManager(llm);
         storeListAdapter = new StoreListAdapter(this, storeInfoList);
         storeRecyclerView.setAdapter(storeListAdapter);
+    }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
     }
 }

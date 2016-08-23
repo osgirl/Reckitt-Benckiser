@@ -46,7 +46,7 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         holder.tvChannel.setText(tsiInfo.getChannel());
         holder.tvGrowth.setText(tsiInfo.getGrowth());
         holder.tvAs.setText(tsiInfo.getAveSales());
-        holder.tvOpp.setText(tsiInfo.getOpportunity());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + tsiInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
         } else {

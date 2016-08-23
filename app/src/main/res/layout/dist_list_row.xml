@@ -89,7 +89,7 @@
                     android:text="168.6"
                     android:textColor="@color/primary_text"
                     android:textSize="18sp"
-                    app:font="@string/omens_bold" />
+                    app:font="@string/omens_medium" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"

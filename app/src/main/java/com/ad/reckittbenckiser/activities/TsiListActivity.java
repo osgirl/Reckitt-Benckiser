@@ -16,6 +16,7 @@ import com.ad.reckittbenckiser.views.CustomTextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by laxmi.khatri on 8/19/2016.
@@ -63,5 +64,10 @@ public class TsiListActivity extends AppCompatActivity {
         tsiFragmentAdapter.addFragment(new AsmPerformanceFragment(), Titles[0]);
         tsiFragmentAdapter.addFragment(new TsiListFragment(), Titles[1]);
         viewPager.setAdapter(tsiFragmentAdapter);
+    }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
     }
 }

@@ -20,6 +20,7 @@ import com.ad.reckittbenckiser.views.CustomTextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by laxmi.khatri on 8/19/2016.
@@ -68,5 +69,10 @@ public class DistributorListActivity extends AppCompatActivity {
         distributorFragmentAdapter.addFragment(new DistributorListFragment(), Titles[1]);
         viewPager.setAdapter(distributorFragmentAdapter);
         viewPager.setAdapter(distributorFragmentAdapter);
+    }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
     }
 }

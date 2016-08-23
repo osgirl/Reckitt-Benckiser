@@ -20,6 +20,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Laxmi.Khatri on 8/20/2016.
@@ -55,4 +56,10 @@ public class DbsrActivity extends AppCompatActivity {
         dbsrListAdapter = new DbsrListAdapter(this, dbsrInfoList);
         dbsrRecyclerView.setAdapter(dbsrListAdapter);
     }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
+    }
+
 }

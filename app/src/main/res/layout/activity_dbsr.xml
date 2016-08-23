@@ -58,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin10"
                     android:text="124-C Agarwal Agency-ph2, Raipur"
+                    android:visibility="gone"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:font="@string/omens_regular" />
@@ -76,13 +77,15 @@
                         android:textSize="18sp"
                         app:font="@string/omens_regular" />
 
+
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="70.17"
+                        android:text="@string/rs_money"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        app:font="@string/omens_bold" />
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        app:font="@string/omens_medium" />
 
                 </LinearLayout>
 

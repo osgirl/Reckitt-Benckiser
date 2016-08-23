@@ -18,6 +18,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by laxmi.khatri on 8/22/2016.
@@ -52,5 +53,10 @@ public class ProductActivity extends AppCompatActivity {
         productRecyclerView.setLayoutManager(llm);
         productListAdapter = new ProductListAdapter(this, productInfoList);
         productRecyclerView.setAdapter(productListAdapter);
+    }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
     }
 }

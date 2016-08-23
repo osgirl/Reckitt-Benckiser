@@ -46,7 +46,8 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
 
         holder.tvDistName.setText(dbsrInfo.getDbsrName());
         holder.tvGrowth.setText(dbsrInfo.getGrowth());
-        holder.tvOpp.setText(dbsrInfo.getOpportunity());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + dbsrInfo.getOpportunity());
+
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {

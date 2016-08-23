@@ -46,7 +46,7 @@ public class DistributorListAdapter extends RecyclerView.Adapter<DistributorList
 
         holder.tvDistName.setText(distributorInfo.getDistributorName());
         holder.tvGrowth.setText(distributorInfo.getGrowth());
-        holder.tvOpp.setText(distributorInfo.getOpportunity());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + distributorInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {

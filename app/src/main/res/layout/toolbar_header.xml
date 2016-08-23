@@ -22,7 +22,7 @@
         <ImageView
             android:background="@android:color/transparent"
             android:layout_height="@dimen/margin25"
-            android:id="@+id/menu"
+            android:id="@+id/backBtn"
             android:scaleType="centerInside"
             android:paddingRight="@dimen/margin15"
             android:layout_width="@dimen/margin45"
