@@ -16,18 +16,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:orientation="horizontal">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="5dp"
-            android:layout_height="match_parent"></View>
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:src="@drawable/dettol_handwash" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp">
 
             <com.ad.reckittbenckiser.views.CustomTextView
                 android:id="@+id/tv_product_name"

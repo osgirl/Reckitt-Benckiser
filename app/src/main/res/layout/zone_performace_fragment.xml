@@ -59,6 +59,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:layout_marginTop="@dimen/margin10"
+            android:clipChildren="false"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="8dp"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true">
+
+            <com.ad.reckittbenckiser.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Opportunity 50Lakh"
+                android:textSize="20sp"
+                app:font="@string/omens_medium" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
             android:clipChildren="false"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="4dp"
@@ -73,22 +95,55 @@
                 android:clickable="true"
                 android:padding="10dp">
 
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"></View>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Opportunity (Lakh)"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:font="@string/omens_medium" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_height="wrap_content"
+                        android:background="@color/purple_darker"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.ad.reckittbenckiser.views.CustomTextView
+                            android:id="@+id/tv_opp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="994.6"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18sp"
+                            app:font="@string/omens_bold" />
+                    </LinearLayout>
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chhattisgarh Growth"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="20sp"
+                        app:font="@string/omens_medium" />
 
                     <LinearLayout
                         android:id="@+id/l2_data"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/light_purple"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:background="@color/deep_purple"
                         android:orientation="horizontal"
                         android:padding="10dp">
 
@@ -113,7 +168,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Monthly - Jul'16"
                                 android:textColor="@color/secondary_text"
-                                android:textSize="13sp"
+                                android:textSize="15sp"
                                 app:font="@string/omens_regular" />
                         </LinearLayout>
 
@@ -138,16 +193,26 @@
                                 android:layout_height="wrap_content"
                                 android:text="QTD"
                                 android:textColor="@color/secondary_text"
-                                android:textSize="13sp"
+                                android:textSize="15sp"
                                 app:font="@string/omens_regular" />
                         </LinearLayout>
                     </LinearLayout>
 
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unbilled Store"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:textSize="20sp"
+                        app:font="@string/omens_medium" />
+
                     <LinearLayout
                         android:id="@+id/ll_data"
                         android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin10"
                         android:layout_height="wrap_content"
-                        android:background="@color/deep_purple"
+                        android:background="@color/light_purple"
                         android:orientation="horizontal"
                         android:padding="10dp">
 
@@ -207,6 +272,13 @@
                         android:background="@color/white"></View>
 
                 </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"></View>
+
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

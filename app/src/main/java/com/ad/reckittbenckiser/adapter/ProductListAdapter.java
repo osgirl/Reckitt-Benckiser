@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
@@ -44,17 +45,26 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         holder.tvProductName.setText(productInfo.getProductName());
         holder.tvGrowth.setText(productInfo.getGrowth());
         holder.tvOpp.setText(mContext.getString(R.string.rs) + productInfo.getOpportunity());
-        if (position % 2 == 0) {
-            holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
-        } else {
-            holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
-        }
         if (position == 0 || position == 1 || position == 2 || position == 3 || position == 4 || position == 8) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
         } else {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
         }
-
+        if (position == 0) {
+            holder.ivProduct.setImageResource(R.drawable.dettol_soap);
+        } else if (position == 1) {
+            holder.ivProduct.setImageResource(R.drawable.dettol_handwash);
+        } else if (position == 2) {
+            holder.ivProduct.setImageResource(R.drawable.harpic);
+        } else if (position == 3) {
+            holder.ivProduct.setImageResource(R.drawable.lizol);
+        } else if (position == 4) {
+            holder.ivProduct.setImageResource(R.drawable.mortein);
+        } else if (position == 5) {
+            holder.ivProduct.setImageResource(R.drawable.veet);
+        } else if (position == 6) {
+            holder.ivProduct.setImageResource(R.drawable.health_care);
+        }
     }
 
     @Override
@@ -67,11 +77,11 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        @Bind(R.id.iv_product)
+        ImageView ivProduct;
+
         @Bind(R.id.ll_container)
         LinearLayout llContainer;
-
-        @Bind(R.id.view)
-        View view;
 
         @Bind(R.id.tv_product_name)
         CustomTextView tvProductName;

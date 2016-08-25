@@ -84,8 +84,8 @@ public class Constants {
         productInfos.add(new ProductInfo("MORTEIN", "-83.3%", "0.32"));
         productInfos.add(new ProductInfo("VEET", "0.0%", "0.09"));
         productInfos.add(new ProductInfo("HEALTHCARE", "383.5%", "0.12"));
-        productInfos.add(new ProductInfo("SWB", "0.0%", "0.00"));
-        productInfos.add(new ProductInfo("OTHERS", "-71.1%", "0.82"));
+        /*productInfos.add(new ProductInfo("SWB", "0.0%", "0.00"));
+        productInfos.add(new ProductInfo("OTHERS", "-71.1%", "0.82"));*/
 
         return productInfos;
     }

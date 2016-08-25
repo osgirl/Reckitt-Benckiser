@@ -34,9 +34,7 @@ public class DbsrActivity extends AppCompatActivity {
     TextView tv_toolbar_title;
 
     DbsrListAdapter dbsrListAdapter;
-
     List<DbsrInfo> dbsrInfoList;
-
     private String TAG = AppConfig.BaseTag + "." + DbsrActivity.class.getSimpleName();
 
     @Override
