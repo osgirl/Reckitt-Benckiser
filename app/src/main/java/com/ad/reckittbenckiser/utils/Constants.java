@@ -89,4 +89,19 @@ public class Constants {
 
         return productInfos;
     }
+
+    public static List<ASMInfo> getAsmLeadorBoard() {
+        List<ASMInfo> asmInfos = new ArrayList<>();
+        asmInfos.add(new ASMInfo("SOUTH BENGAl", "21%", 1));
+        asmInfos.add(new ASMInfo("NORTH BIHAR", "20%", 2));
+        asmInfos.add(new ASMInfo("BIHAR", "17%", 3));
+        asmInfos.add(new ASMInfo("CHHATTISGARH", "14%", 4));
+        asmInfos.add(new ASMInfo("ORISSA ", "11%", 5));
+        asmInfos.add(new ASMInfo("JHARKHAND", "9%", 6));
+        asmInfos.add(new ASMInfo("CALCUTTA", "8%", 7));
+        asmInfos.add(new ASMInfo("NORTH EAST", "4%", 8));
+        asmInfos.add(new ASMInfo("NORTH BENGAL", "-22%", 9));
+
+        return asmInfos;
+    }
 }

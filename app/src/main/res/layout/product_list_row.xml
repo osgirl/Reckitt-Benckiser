@@ -22,7 +22,6 @@
             android:id="@+id/iv_product"
             android:layout_width="120dp"
             android:layout_height="160dp"
-            android:scaleType="centerCrop"
             android:src="@drawable/health_care" />
 
         <LinearLayout

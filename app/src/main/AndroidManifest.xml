@@ -13,10 +13,7 @@
             android:name=".activities.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
@@ -58,5 +55,15 @@
             android:name=".activities.ProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
+
+        <activity
+            android:name=".activities.AsmLeaderBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

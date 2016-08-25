@@ -10,6 +10,7 @@ public class ASMInfo {
     private String monthlyGrowth;
     private String urbanStoreCount;
     private String ruralStoreCount;
+    private int rank;
 
     public String getAsmName() {
         return asmName;
@@ -57,5 +58,11 @@ public class ASMInfo {
         this.qtdGrowth = qtdGrowth;
         this.urbanStoreCount = urbanStoreCount;
         this.ruralStoreCount = ruralStoreCount;
+    }
+
+    public ASMInfo(String asmName, String monthlyGrowth, int rank) {
+        this.asmName = asmName;
+        this.monthlyGrowth = monthlyGrowth;
+        this.rank = rank;
     }
 }
