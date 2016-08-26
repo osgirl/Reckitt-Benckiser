@@ -36,9 +36,9 @@
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="Raipur Tsi"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_text"
                 android:textSize="20sp"
-                app:font="@string/omens_bold" />
+                app:font="@string/omens_medium" />
 
             <LinearLayout
                 android:id="@+id/ll_data"
@@ -60,7 +60,7 @@
                     android:id="@+id/tv_growth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3.0%"
+                    android:text="  3.0%"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     app:font="@string/omens_regular" />
@@ -85,9 +85,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="168.6"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/primary_text"
                     android:textSize="18sp"
-                    app:font="@string/omens_bold" />
+                    app:font="@string/omens_medium" />
 
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"

@@ -43,16 +43,16 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         final TSIInfo tsiInfo = mTsiList.get(position);
 
         holder.tvTsiName.setText(tsiInfo.getTsiName());
-        holder.tvChannel.setText(tsiInfo.getChannel());
+        holder.tvChannel.setText("-" + tsiInfo.getChannel());
         holder.tvGrowth.setText(tsiInfo.getGrowth());
-        holder.tvAs.setText(tsiInfo.getAveSales());
-        holder.tvOpp.setText(tsiInfo.getOpportunity());
-        if (position % 2 == 0) {
+        //holder.tvAs.setText(tsiInfo.getAveSales());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + tsiInfo.getOpportunity());
+        /*if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
-        }
-        if (position == 2) {
+        }*/
+        if (position == 4) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
         } else {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.green_color));
@@ -81,8 +81,8 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         @Bind(R.id.ll_container)
         LinearLayout llContainer;
 
-        @Bind(R.id.view)
-        View view;
+        /*@Bind(R.id.view)
+        View view;*/
 
         @Bind(R.id.tv_tsi_name)
         CustomTextView tvTsiName;
@@ -93,8 +93,8 @@ public class TsiListAdapter extends RecyclerView.Adapter<TsiListAdapter.ViewHold
         @Bind(R.id.tv_growth)
         CustomTextView tvGrowth;
 
-        @Bind(R.id.tv_as)
-        CustomTextView tvAs;
+        /*@Bind(R.id.tv_as)
+        CustomTextView tvAs;*/
 
         @Bind(R.id.tv_opp)
         CustomTextView tvOpp;

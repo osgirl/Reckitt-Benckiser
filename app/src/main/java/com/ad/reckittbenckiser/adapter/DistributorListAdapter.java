@@ -45,13 +45,13 @@ public class DistributorListAdapter extends RecyclerView.Adapter<DistributorList
         final DistributorInfo distributorInfo = mDistList.get(position);
 
         holder.tvDistName.setText(distributorInfo.getDistributorName());
-        holder.tvGrowth.setText(distributorInfo.getGrowth());
-        holder.tvOpp.setText(distributorInfo.getOpportunity());
-        if (position % 2 == 0) {
+        holder.tvGrowth.setText("  "+distributorInfo.getGrowth());
+        holder.tvOpp.setText(mContext.getString(R.string.rs) + distributorInfo.getOpportunity());
+       /* if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
-        }
+        }*/
         if (position == 0) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
         } else {
@@ -81,8 +81,8 @@ public class DistributorListAdapter extends RecyclerView.Adapter<DistributorList
         @Bind(R.id.ll_container)
         LinearLayout llContainer;
 
-        @Bind(R.id.view)
-        View view;
+        /*@Bind(R.id.view)
+        View view;*/
 
         @Bind(R.id.tv_dist_name)
         CustomTextView tvDistName;

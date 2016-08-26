@@ -16,7 +16,7 @@ import java.util.List;
 public class TsiFragmentAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
-    private final List<String> mFragmentTitleList = new ArrayList<>();
+    //private final List<String> mFragmentTitleList = new ArrayList<>();
 
     public TsiFragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -34,11 +34,12 @@ public class TsiFragmentAdapter extends FragmentPagerAdapter {
 
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
-        mFragmentTitleList.add(title);
+//        mFragmentTitleList.add(title);
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentTitleList.get(position);
+        return "";
+        //return mFragmentTitleList.get(position);
     }
 }

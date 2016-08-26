@@ -51,7 +51,7 @@ public class TsiListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tsi_list, null);
         ButterKnife.bind(this, view);
-        Tracer.info(TAG, "DistributorListFragment().onCreateView()");
+        Tracer.info(TAG, "TsiListFragment().onCreateView()");
         initViewAndAdapter();
         return view;
     }

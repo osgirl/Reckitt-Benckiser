@@ -1,75 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".activities.SplashActivity">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splash_01"
         android:scaleType="centerCrop"
-    />
+        android:src="@drawable/splash_01" />
 
     <LinearLayout
         android:id="@+id/layoutKiaOra"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/background_circle_blue"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="5dp"
-        android:layout_marginBottom="25dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/txtKiaOra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome"
-            android:textSize="15dp"
-            android:gravity="center"
             android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center"
+            android:text="Welcome"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
-            />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sjs"
+            android:ellipsize="end"
             android:padding="5dp"
             android:singleLine="true"
-            android:ellipsize="end"
-            android:visibility="gone"
-            android:textSize="15dp"
+            android:text="sjs"
             android:textColor="@android:color/white"
-            />
+            android:textSize="15dp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <com.ad.reckittbenckiser.views.CustomTextView
-        android:text="Healthier \nHappier \nStronger"
-        android:textColor="#405A69"
-        app:font="@string/omens_medium"
-        android:textSize="30dp"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/margin20"
-        android:id="@+id/textView2" />
+        android:gravity="center"
+        android:text="Health \nHygiene \nHome"
+        android:textColor="#405A69"
+        android:textSize="30dp"
+        app:font="@string/omens_medium" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:src="@mipmap/rb_logo"
         android:layout_gravity="center"
         android:layout_marginBottom="120dp"
-        android:id="@+id/imageView" />
+        android:src="@mipmap/rb_logo" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_powered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.ad.reckittbenckiser.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="powered by"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp"
+            app:font="@string/omens_regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/adt" />
+
+
+    </LinearLayout>
 
 </FrameLayout>
 

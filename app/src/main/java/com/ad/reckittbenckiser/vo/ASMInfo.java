@@ -12,6 +12,10 @@ public class ASMInfo {
     private String ruralStoreCount;
     private int rank;
 
+    public int getRank() {
+        return rank;
+    }
+
     public String getAsmName() {
         return asmName;
     }

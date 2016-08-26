@@ -47,7 +47,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
         final StoreInfo storeInfo = mStoreList.get(position);
 
         holder.tvStoreName.setText(storeInfo.getStoreName());
-        holder.tvGrowth.setText(storeInfo.getGrowth());
+        holder.tvGrowth.setText("  "+storeInfo.getGrowth());
         holder.tvOpp.setText(mContext.getString(R.string.rs) + storeInfo.getOpportunity());
         if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));

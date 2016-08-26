@@ -38,7 +38,7 @@
                 android:text="Raipur Tsi"
                 android:textColor="@color/primary_text"
                 android:textSize="20sp"
-                app:font="@string/omens_bold" />
+                app:font="@string/omens_medium" />
 
             <com.ad.reckittbenckiser.views.CustomTextView
                 android:id="@+id/tv_channel"
@@ -79,7 +79,7 @@
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Monthly Growth"
+                        android:text="Monthly - Jul'16"
                         android:textColor="@color/secondary_text"
                         android:textSize="13sp"
                         app:font="@string/omens_regular" />
@@ -104,7 +104,7 @@
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Quater Growth"
+                        android:text="QTD"
                         android:textColor="@color/secondary_text"
                         android:textSize="13sp"
                         app:font="@string/omens_regular" />

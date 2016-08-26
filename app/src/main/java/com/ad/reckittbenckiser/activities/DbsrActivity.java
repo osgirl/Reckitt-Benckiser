@@ -20,6 +20,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Laxmi.Khatri on 8/20/2016.
@@ -33,9 +34,7 @@ public class DbsrActivity extends AppCompatActivity {
     TextView tv_toolbar_title;
 
     DbsrListAdapter dbsrListAdapter;
-
     List<DbsrInfo> dbsrInfoList;
-
     private String TAG = AppConfig.BaseTag + "." + DbsrActivity.class.getSimpleName();
 
     @Override
@@ -48,11 +47,17 @@ public class DbsrActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
-        tv_toolbar_title.setText("DBSR/PSR LEVEL OPPORTUNITY");
+        tv_toolbar_title.setText("DBSR/PSR   Level   Opportunity");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         dbsrRecyclerView.setLayoutManager(llm);
         dbsrListAdapter = new DbsrListAdapter(this, dbsrInfoList);
         dbsrRecyclerView.setAdapter(dbsrListAdapter);
     }
+
+    @OnClick(R.id.backBtn)
+    public void back(){
+        finish();
+    }
+
 }
