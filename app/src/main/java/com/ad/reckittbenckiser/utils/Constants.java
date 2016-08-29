@@ -30,7 +30,7 @@ public class Constants {
 
     public static String[] getTsiNameArray() {
 
-        String[] tsiNames = new String[]{"Raipur TSI", "Bilaspur (TSI)", "Pragati TSI (DURG CG)", "BILASPUR ASE", "RAIPUR ASE"};
+        String[] tsiNames = new String[]{"Pragati TSI (DURG CG)", "RAIPUR ASE", "BILASPUR ASE", "Bilaspur (TSI)", "Raipur TSI",};
 
         return tsiNames;
     }
