@@ -80,6 +80,9 @@ public class AsmPerformanceFragment extends Fragment {
 
     List<TSIInfo> tsiInfoList;
     float spaceForBar = 10f;
+    // global variables
+    protected Entry entry;
+    protected Highlight highlight;
 
     @Nullable
     @Override
@@ -237,6 +240,9 @@ public class AsmPerformanceFragment extends Fragment {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
                 Tracer.info(TAG, "AsmPerformanceFragment().onValueSelected(): " + e);
+                // set global variables
+                entry = e;
+                highlight = h;
                 if (e.getY() == 168.6f) {
                     Intent intent = new Intent(getActivity(), DistributorListActivity.class);
                     startActivity(intent);
@@ -245,9 +251,10 @@ public class AsmPerformanceFragment extends Fragment {
 
             @Override
             public void onNothingSelected() {
-
+                onValueSelected(entry, highlight);
             }
         });
+        horizontalBarChart.highlightValues(null);
     }
 
     private void setData(int count) {
