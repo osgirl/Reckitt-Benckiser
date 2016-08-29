@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.ad.reckittbenckiser.views.CustomTextView
+        android:id="@+id/tv_rank"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="10"
+        android:background="@color/light_purple1"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:font="@string/omens_regular" />
+
+    <com.ad.reckittbenckiser.views.CustomTextView
+        android:id="@+id/tv_asm_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="10"
+        android:background="@color/light_purple2"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:font="@string/omens_regular" />
+
+    <com.ad.reckittbenckiser.views.CustomTextView
+        android:id="@+id/tv_growth"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="10"
+        android:background="@color/light_purple3"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:font="@string/omens_regular" />
+
+</LinearLayout>

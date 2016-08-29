@@ -18,7 +18,7 @@ import java.util.List;
 public class DistributorFragmentAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
-    private final List<String> mFragmentTitleList = new ArrayList<>();
+//    private final List<String> mFragmentTitleList = new ArrayList<>();
 
     public DistributorFragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -31,13 +31,15 @@ public class DistributorFragmentAdapter extends FragmentPagerAdapter {
 
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
-        mFragmentTitleList.add(title);
+//        mFragmentTitleList.add(title);
     }
 
     // This method return the titles for the Tabs in the Tab Strip
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentTitleList.get(position);
+
+//        return mFragmentTitleList.get(position);
+        return "";
     }
 
     @Override

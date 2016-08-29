@@ -20,13 +20,21 @@ public class Constants {
 
         List<TSIInfo> tsiInfos = new ArrayList<>();
         tsiInfos.add(new TSIInfo("Raipur TSI", "URBAN", "3.0%", "188.2", "168.6"));
-        tsiInfos.add(new TSIInfo("Bilaspur (TSI)", "URBAN", "23.2%", "99.7", "130.2"));
-        tsiInfos.add(new TSIInfo("Pragati TSI (DURG CG)", "URBAN", "-39.7%", "80.5", "59.9"));
-        tsiInfos.add(new TSIInfo("BILASPUR ASE", "RURAL", "39.6%", "165.6", "118.2"));
-        tsiInfos.add(new TSIInfo("RAIPUR ASE", "RURAL", "31.8%", "222.2", "106.9"));
+        tsiInfos.add(new TSIInfo("Bilaspur TSI", "URBAN", "23.2%", "99.7", "130.2"));
+        tsiInfos.add(new TSIInfo("Bilaspur ASE", "RURAL", "39.6%", "165.6", "118.2"));
+        tsiInfos.add(new TSIInfo("Raipur ASE", "RURAL", "31.8%", "222.2", "106.9"));
+        tsiInfos.add(new TSIInfo("Pragati TSI (Durg CG)", "URBAN", "-39.7%", "80.5", "59.9"));
 
         return tsiInfos;
     }
+
+    public static String[] getTsiNameArray() {
+
+        String[] tsiNames = new String[]{"Raipur TSI", "Bilaspur (TSI)", "Pragati TSI (DURG CG)", "BILASPUR ASE", "RAIPUR ASE"};
+
+        return tsiNames;
+    }
+
 
     public static List<ASMInfo> getASMList() {
 
@@ -54,12 +62,12 @@ public class Constants {
 
     public static List<DbsrInfo> getDbsrList() {
         List<DbsrInfo> dbsrInfos = new ArrayList<>();
-        dbsrInfos.add(new DbsrInfo("YESHWANT SAHU", "16%", "49.19"));
-        dbsrInfos.add(new DbsrInfo("RAJESH VYAS", "-66%", "9.81"));
-        dbsrInfos.add(new DbsrInfo("RAJKUMAR BANSOD", "72%", "7.37"));
-        dbsrInfos.add(new DbsrInfo("VIKAS MISHRA", "-45%", "3.80"));
+        dbsrInfos.add(new DbsrInfo("Yeshwant Sahu", "16%", "49.19"));
+        dbsrInfos.add(new DbsrInfo("Rajesh Vyas", "-66%", "9.81"));
+        dbsrInfos.add(new DbsrInfo("Rajkumar Bansod", "72%", "7.37"));
+        dbsrInfos.add(new DbsrInfo("Vikas Mishra", "-45%", "3.80"));
         dbsrInfos.add(new DbsrInfo("NA", "-100%", "0.00"));
-        dbsrInfos.add(new DbsrInfo("AMIN KHAN", "-100%", "0.00"));
+        dbsrInfos.add(new DbsrInfo("Amin Khan", "-100%", "0.00"));
 
         return dbsrInfos;
     }
@@ -77,16 +85,31 @@ public class Constants {
 
     public static List<ProductInfo> getProductList() {
         List<ProductInfo> productInfos = new ArrayList<>();
-        productInfos.add(new ProductInfo("DETTOL SOAP", "-95.1%", "3.20"));
-        productInfos.add(new ProductInfo("DETTOL HANDWASH", "-95.3%", "0.43"));
-        productInfos.add(new ProductInfo("HARPIC", "-39.2%", "3.79"));
-        productInfos.add(new ProductInfo("LIZOL", "-89.1%", "2.06"));
-        productInfos.add(new ProductInfo("MORTEIN", "-83.3%", "0.32"));
-        productInfos.add(new ProductInfo("VEET", "0.0%", "0.09"));
-        productInfos.add(new ProductInfo("HEALTHCARE", "383.5%", "0.12"));
+        productInfos.add(new ProductInfo("Dettol Soap", "-95.1%", "3.20"));
+        productInfos.add(new ProductInfo("Dettol Handwash", "-95.3%", "0.43"));
+        productInfos.add(new ProductInfo("Harpic", "-39.2%", "3.79"));
+        productInfos.add(new ProductInfo("Lizol", "-89.1%", "2.06"));
+        productInfos.add(new ProductInfo("Mortein", "-83.3%", "0.32"));
+        productInfos.add(new ProductInfo("Veet", "0.0%", "0.09"));
+        productInfos.add(new ProductInfo("Healthcare", "383.5%", "0.12"));
         /*productInfos.add(new ProductInfo("SWB", "0.0%", "0.00"));
         productInfos.add(new ProductInfo("OTHERS", "-71.1%", "0.82"));*/
 
         return productInfos;
+    }
+
+    public static List<ASMInfo> getAsmLeadorBoard() {
+        List<ASMInfo> asmInfos = new ArrayList<>();
+        asmInfos.add(new ASMInfo("South Bengal", "21%", 1));
+        asmInfos.add(new ASMInfo("North Bihar", "20%", 2));
+        asmInfos.add(new ASMInfo("Bihar", "17%", 3));
+        asmInfos.add(new ASMInfo("Chhattisgarh", "14%", 4));
+        asmInfos.add(new ASMInfo("Orissa ", "11%", 5));
+        asmInfos.add(new ASMInfo("Jharkhand", "9%", 6));
+        asmInfos.add(new ASMInfo("Calcutta", "8%", 7));
+        asmInfos.add(new ASMInfo("North East", "4%", 8));
+        asmInfos.add(new ASMInfo("North Bengal", "-22%", 9));
+
+        return asmInfos;
     }
 }

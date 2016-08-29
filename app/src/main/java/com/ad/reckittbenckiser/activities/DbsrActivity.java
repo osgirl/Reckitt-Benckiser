@@ -47,7 +47,7 @@ public class DbsrActivity extends AppCompatActivity {
     }
 
     private void initViewAndAdapter() {
-        tv_toolbar_title.setText("DBSR/PSR LEVEL OPPORTUNITY");
+        tv_toolbar_title.setText("DBSR/PSR   Level   Opportunity");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         dbsrRecyclerView.setLayoutManager(llm);

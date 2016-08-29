@@ -43,7 +43,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         final ProductInfo productInfo = mProductList.get(position);
 
         holder.tvProductName.setText(productInfo.getProductName());
-        holder.tvGrowth.setText(productInfo.getGrowth());
+        holder.tvGrowth.setText("   "+productInfo.getGrowth());
         holder.tvOpp.setText(mContext.getString(R.string.rs) + productInfo.getOpportunity());
         if (position == 0 || position == 1 || position == 2 || position == 3 || position == 4 || position == 8) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));

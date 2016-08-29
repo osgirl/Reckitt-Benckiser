@@ -45,7 +45,7 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
         final DbsrInfo dbsrInfo = mDbsrList.get(position);
 
         holder.tvDistName.setText(dbsrInfo.getDbsrName());
-        holder.tvGrowth.setText(dbsrInfo.getGrowth());
+        holder.tvGrowth.setText("  " + dbsrInfo.getGrowth());
         holder.tvOpp.setText(mContext.getString(R.string.rs) + dbsrInfo.getOpportunity());
 
         if (position % 2 == 0) {

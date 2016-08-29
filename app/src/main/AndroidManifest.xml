@@ -58,5 +58,12 @@
             android:name=".activities.ProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
+
+        <activity
+            android:name=".activities.AsmLeaderBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+
+        </activity>
     </application>
 </manifest>

@@ -6,9 +6,9 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:clipChildren="false"
-    card_view:cardBackgroundColor="@color/white"
+    card_view:cardBackgroundColor="@color/light_purple"
     card_view:cardCornerRadius="4dp"
-    card_view:cardElevation="8dp"
+    card_view:cardElevation="5dp"
     card_view:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -16,88 +16,154 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:orientation="vertical"
+        android:padding="5dp">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="5dp"
-            android:layout_height="match_parent"></View>
+        <!-- <View
+             android:id="@+id/view"
+             android:layout_width="5dp"
+             android:layout_height="match_parent"></View>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <com.ad.reckittbenckiser.views.CustomTextView
+                 android:id="@+id/tv_dist_name"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="left"
+                 android:padding="10dp"
+                 android:text="Raipur Tsi"
+                 android:textColor="@color/primary_text"
+                 android:textSize="20sp"
+                 app:font="@string/omens_medium" />
+
+             <LinearLayout
+                 android:id="@+id/ll_data"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:paddingBottom="10dp"
+                 android:paddingLeft="10dp"
+                 android:paddingRight="10dp">
+
+                 <com.ad.reckittbenckiser.views.CustomTextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Growth "
+                     android:textSize="13sp"
+                     app:font="@string/omens_regular" />
+
+                 <com.ad.reckittbenckiser.views.CustomTextView
+                     android:id="@+id/tv_growth"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="  3.0%"
+                     android:textColor="@color/colorPrimaryDark"
+                     android:textSize="15sp"
+                     app:font="@string/omens_regular" />
+
+
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/white"></View>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@color/deep_purple"
+                 android:gravity="center_horizontal"
+                 android:orientation="vertical"
+                 android:padding="10dp">
+
+                 <com.ad.reckittbenckiser.views.CustomTextView
+                     android:id="@+id/tv_opp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:text="168.6"
+                     android:textColor="@color/primary_text"
+                     android:textSize="18sp"
+                     app:font="@string/omens_medium" />
+
+                 <com.ad.reckittbenckiser.views.CustomTextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Opportunity(in Lakhs)"
+                     android:textSize="13sp"
+                     app:font="@string/omens_regular" />
+             </LinearLayout>
+         </LinearLayout>-->
+
+        <com.ad.reckittbenckiser.views.CustomTextView
+            android:id="@+id/tv_dist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Agarwal Agency"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:font="@string/omens_medium" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
             <com.ad.reckittbenckiser.views.CustomTextView
-                android:id="@+id/tv_dist_name"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="Raipur Tsi"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:font="@string/omens_medium" />
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Opportunity(in Lakhs)"
+                android:textColor="@color/secondary_text"
+                android:textSize="15sp"
+                app:font="@string/omens_regular" />
 
-            <LinearLayout
-                android:id="@+id/ll_data"
-                android:layout_width="match_parent"
+            <com.ad.reckittbenckiser.views.CustomTextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="10dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Growth"
+                android:textColor="@color/secondary_text"
+                android:textSize="15sp"
+                app:font="@string/omens_regular" />
 
-                <com.ad.reckittbenckiser.views.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Growth "
-                    android:textSize="13sp"
-                    app:font="@string/omens_regular" />
-
-                <com.ad.reckittbenckiser.views.CustomTextView
-                    android:id="@+id/tv_growth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3.0%"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"
-                    app:font="@string/omens_regular" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/white"></View>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/deep_purple"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <com.ad.reckittbenckiser.views.CustomTextView
-                    android:id="@+id/tv_opp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="168.6"
-                    android:textColor="@color/primary_text"
-                    android:textSize="18sp"
-                    app:font="@string/omens_medium" />
-
-                <com.ad.reckittbenckiser.views.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opportunity(in Lakhs)"
-                    android:textSize="13sp"
-                    app:font="@string/omens_regular" />
-            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.ad.reckittbenckiser.views.CustomTextView
+                android:id="@+id/tv_opp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="20sp"
+                app:font="@string/omens_regular" />
+
+            <com.ad.reckittbenckiser.views.CustomTextView
+                android:id="@+id/tv_growth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textColor="@color/secondary_text"
+                android:textSize="18sp"
+                app:font="@string/omens_regular" />
+        </LinearLayout>
+
     </LinearLayout>
 </android.support.v7.widget.CardView>

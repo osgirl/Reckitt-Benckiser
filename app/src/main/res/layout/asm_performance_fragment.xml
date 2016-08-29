@@ -1,66 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/app_white_pattern"
-    android:layout_height="match_parent">
-
+    android:fillViewport="true"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/storyHeaderImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/northbangal"
-            android:scaleType="centerCrop"/>
-
-        <com.ad.reckittbenckiser.views.CustomTextView
-            android:id="@+id/storyTitle"
-            android:text="North Bengal"
-            app:font="@string/omens_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin20"
-            android:layout_marginRight="@dimen/margin40"
-            android:layout_marginTop="@dimen/margin30"
-            android:textColor="@color/primary_text"
-            android:textSize="20dp" />
-
-        <View
-            android:layout_width="60dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="@dimen/margin20"
-            android:layout_marginRight="@dimen/margin20"
-            android:layout_marginTop="@dimen/margin10"
-            android:background="@color/primary_text" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/storyDate"
-            android:textSize="16dp"
-            android:layout_marginTop="@dimen/margin10"
-            android:visibility="gone"
-            android:layout_marginLeft="@dimen/margin20"
-            android:layout_marginRight="@dimen/margin20"
-            android:text="There will be some description of the zone. \nThere will be some description of the zone.\nThere will be some description of the zone. \nThere will be some description of the zone."
-            android:textColor="@color/secondary_text"
-            />
-
-        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:clipChildren="false"
+            android:visibility="visible"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="4dp"
             card_view:cardElevation="8dp"
@@ -70,183 +28,236 @@
                 android:id="@+id/ll_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="5dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- <com.ad.reckittbenckiser.views.CustomTextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginTop="@dimen/margin10"
+                 android:text="Opportunity (in Lakhs)"
+                 android:textColor="@color/primary_text"
+                 android:textSize="20sp"
+                 android:visibility="gone"
+                 app:font="@string/omens_medium" />
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/margin10"
+                 android:background="@color/purple_darker"
+                 android:gravity="center_horizontal"
+                 android:orientation="vertical"
+                 android:padding="10dp"
+                 android:visibility="gone">
+
+                 <com.ad.reckittbenckiser.views.CustomTextView
+                     android:id="@+id/tv_opp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:text="994.6"
+                     android:textColor="@color/white"
+                     android:textSize="18sp"
+                     app:font="@string/omens_bold" />
+             </LinearLayout>
+
+             <com.ad.reckittbenckiser.views.CustomTextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginTop="@dimen/margin10"
+                 android:text="Growth"
+                 android:textColor="@color/secondary_text"
+                 android:textSize="20sp"
+                 android:visibility="gone"
+                 app:font="@string/omens_medium" />-->
+
+            <LinearLayout
+                android:id="@+id/l2_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/deep_purple"
+                android:elevation="6dp"
+                android:orientation="horizontal"
                 android:padding="10dp">
 
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"></View>
-
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
-
-                    <LinearLayout
-                        android:id="@+id/l2_data"
-                        android:layout_width="match_parent"
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/light_purple"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:gravity="center"
+                        android:text="Opportunity\n(in Lakhs)"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="15sp"
+                        app:font="@string/omens_regular" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:id="@+id/monthly_growth"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="14.0%"
-                                android:textColor="@color/primary_text"
-                                android:textSize="15sp"
-                                app:font="@string/omens_regular" />
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Monthly - Jul'16"
-                                android:textColor="@color/secondary_text"
-                                android:textSize="13sp"
-                                app:font="@string/omens_regular" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:id="@+id/qtr_growth"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="4.9%"
-                                android:textColor="@color/primary_text"
-                                android:textSize="15sp"
-                                app:font="@string/omens_regular" />
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="QTD"
-                                android:textColor="@color/secondary_text"
-                                android:textSize="13sp"
-                                app:font="@string/omens_regular" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ll_data"
-                        android:layout_width="match_parent"
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:id="@+id/tv_oppor"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/deep_purple"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:id="@+id/urbanStore"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="1339"
-                                android:textColor="@color/primary_text"
-                                android:textSize="15sp"
-                                app:font="@string/omens_regular" />
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Urban Stores"
-                                android:textSize="13sp"
-                                app:font="@string/omens_regular" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:id="@+id/ruralStore"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="86"
-                                android:textColor="@color/primary_text"
-                                android:textSize="15sp"
-                                app:font="@string/omens_regular" />
-
-                            <com.ad.reckittbenckiser.views.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rural Stores"
-                                android:textSize="13sp"
-                                app:font="@string/omens_regular" />
-                        </LinearLayout>
-                    </LinearLayout>
+                        android:gravity="center"
+                        android:text="994.6"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:font="@string/omens_regular" />
+                </LinearLayout>
 
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/white"></View>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Growth Monthly - Jul'16"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="15sp"
+                        app:font="@string/omens_regular" />
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:id="@+id/monthly_growth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14.1%"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:font="@string/omens_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Growth \nQTD"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="15sp"
+                        app:font="@string/omens_regular" />
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(in Lakhs)"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        app:font="@string/omens_regular" />
+
+                    <com.ad.reckittbenckiser.views.CustomTextView
+                        android:id="@+id/qtr_growth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.9%"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:font="@string/omens_regular" />
 
                 </LinearLayout>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
 
-        <com.ad.reckittbenckiser.views.CustomTextView
-            android:text="Opportunity from billed stores"
-            app:font="@string/omens_medium"
-            android:layout_width="wrap_content"
+            <!-- <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/white"></View>-->
+
+        </LinearLayout>
+        <!--   </LinearLayout>
+       </android.support.v7.widget.CardView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin20"
-            android:layout_marginRight="@dimen/margin40"
-            android:layout_marginTop="@dimen/margin20"
-            android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:orientation="horizontal"
+            android:visibility="visible">
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/chart"
-            android:layout_marginTop="@dimen/margin10"
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="300dp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
 
-        <com.ad.reckittbenckiser.views.CustomTextView
-            android:text="Opportunity from Unbilled stores"
-            app:font="@string/omens_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin20"
-            android:layout_marginRight="@dimen/margin40"
-            android:layout_marginTop="@dimen/margin20"
-            android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+                <com.ad.reckittbenckiser.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Opportunity from\nbilled stores"
+                    android:textColor="@color/primary_text"
+                    android:textSize="15sp"
+                    app:font="@string/omens_medium" />
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/unbilledChart"
-            android:layout_marginTop="@dimen/margin10"
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="300dp" />
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <com.ad.reckittbenckiser.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Opportunity from\nUnbilled stores"
+                    android:textColor="@color/primary_text"
+                    android:textSize="15sp"
+                    app:font="@string/omens_medium" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/unbilledChart"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin10" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            layout="@layout/fragment_tsi_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="visible"></com.github.mikephil.charting.charts.HorizontalBarChart>
 
     </LinearLayout>
-
 </ScrollView>

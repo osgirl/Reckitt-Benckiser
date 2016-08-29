@@ -30,8 +30,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="140dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/user_image" />
 
@@ -48,7 +48,7 @@
                 <com.ad.reckittbenckiser.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="YESHWANT SAHU"
+                    android:text="Yeshwant  Sahu"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:font="@string/omens_medium" />
@@ -79,7 +79,7 @@
                         android:id="@+id/tv_opp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="49.19L"
+                        android:text="  49.19L"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         app:font="@string/omens_medium" />

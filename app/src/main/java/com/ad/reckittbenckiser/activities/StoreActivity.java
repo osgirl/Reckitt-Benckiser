@@ -53,8 +53,8 @@ public class StoreActivity extends AppCompatActivity {
 
     private void initViewAndAdapter() {
 
-        tv_toolbar_title.setText("OPPORTUNITY BY STORE");
-        tvOpp.setText(getString(R.string.rs) + "49.19L");
+        tv_toolbar_title.setText("Opportunity  by  Store");
+        tvOpp.setText("  "+getString(R.string.rs) + "49.19L");
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 

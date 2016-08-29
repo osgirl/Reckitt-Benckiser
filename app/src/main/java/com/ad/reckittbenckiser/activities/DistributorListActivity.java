@@ -33,15 +33,15 @@ public class DistributorListActivity extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.tabs)
-    TabLayout tabLayout;
+   /* @Bind(R.id.tabs)
+    TabLayout tabLayout;*/
 
     @Bind(R.id.tv_toolbar_title)
     CustomTextView tvTitle;
 
     private String TAG = AppConfig.BaseTag + "." + DistributorListActivity.class.getSimpleName();
 
-    String Titles[] = {"Overall Performance", "Distributor List"};
+//    String Titles[] = {"Overall Performance", "Distributor List"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,19 +55,18 @@ public class DistributorListActivity extends AppCompatActivity {
         Tracer.info(TAG, "DistributorListActivity().init()");
         // Creating The Toolbar and setting it as the Toolbar for the activity
         setSupportActionBar(toolbar);
-        tvTitle.setText("RAIPUR TSI OPPORTUNITY");
+        tvTitle.setText("Raipur  TSI  Opportunity");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         setupViewPager();
 
         // Setting the ViewPager For the SlidingTabsLayout
-        tabLayout.setupWithViewPager(viewPager);
+//        tabLayout.setupWithViewPager(viewPager);
     }
 
     private void setupViewPager() {
         DistributorFragmentAdapter distributorFragmentAdapter = new DistributorFragmentAdapter(getSupportFragmentManager());
-        distributorFragmentAdapter.addFragment(new TsiPerformanceFragment(), Titles[0]);
-        distributorFragmentAdapter.addFragment(new DistributorListFragment(), Titles[1]);
-        viewPager.setAdapter(distributorFragmentAdapter);
+        distributorFragmentAdapter.addFragment(new TsiPerformanceFragment(), "");
+        //distributorFragmentAdapter.addFragment(new DistributorListFragment(), Titles[1]);
         viewPager.setAdapter(distributorFragmentAdapter);
     }
 

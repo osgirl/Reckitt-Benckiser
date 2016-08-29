@@ -19,27 +19,26 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:background="@android:color/transparent"
-            android:layout_height="@dimen/margin25"
             android:id="@+id/backBtn"
-            android:scaleType="centerInside"
-            android:paddingRight="@dimen/margin15"
             android:layout_width="@dimen/margin45"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin10"
+            android:layout_height="@dimen/margin25"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:background="@android:color/transparent"
+            android:paddingRight="@dimen/margin15"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
 
         <com.ad.reckittbenckiser.views.CustomTextView
             android:id="@+id/tv_toolbar_title"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="Reckitt Benckiser"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:font="@string/omens_regular" />
     </RelativeLayout>
 

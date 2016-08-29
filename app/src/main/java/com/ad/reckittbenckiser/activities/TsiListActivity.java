@@ -29,15 +29,15 @@ public class TsiListActivity extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.tabs)
-    TabLayout tabLayout;
+    /*@Bind(R.id.tabs)
+    TabLayout tabLayout;*/
 
     @Bind(R.id.tv_toolbar_title)
     CustomTextView tvTitle;
 
     private String TAG = AppConfig.BaseTag + "." + TsiListActivity.class.getSimpleName();
 
-    String Titles[] = {"Overall Performance", "TSI list"};
+    //String Titles[] = {"Overall Performance", "TSI list"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,23 +51,23 @@ public class TsiListActivity extends AppCompatActivity {
         Tracer.info(TAG, "TsiListActivity().init()");
         // Creating The Toolbar and setting it as the Toolbar for the activity
         setSupportActionBar(toolbar);
-        tvTitle.setText("NORTH BENGAL OPPORTUNITY");
+        tvTitle.setText("Chhattisgarh   Opportunity");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         setupViewPager();
 
         // Setting the ViewPager For the SlidingTabsLayout
-        tabLayout.setupWithViewPager(viewPager);
+//        tabLayout.setupWithViewPager(viewPager);
     }
 
     private void setupViewPager() {
         TsiFragmentAdapter tsiFragmentAdapter = new TsiFragmentAdapter(getSupportFragmentManager());
-        tsiFragmentAdapter.addFragment(new AsmPerformanceFragment(), Titles[0]);
-        tsiFragmentAdapter.addFragment(new TsiListFragment(), Titles[1]);
+        tsiFragmentAdapter.addFragment(new AsmPerformanceFragment(), "");
+//        tsiFragmentAdapter.addFragment(new TsiListFragment(), Titles[1]);
         viewPager.setAdapter(tsiFragmentAdapter);
     }
 
     @OnClick(R.id.backBtn)
-    public void back(){
+    public void back() {
         finish();
     }
 }

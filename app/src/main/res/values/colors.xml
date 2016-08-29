@@ -40,6 +40,23 @@
     <color name="pink_shade">#D7328D</color>
 
 
+    <!--Row Colors-->
+    <color name="light_grey1">#F5F5F5</color>
+    <color name="light_grey2">#EEEEEE</color>
+    <color name="light_grey3">#E0E0E0</color>
+
+    <color name="light_pink1">#FCE4EC</color>
+    <color name="light_pink2">#F8BBD0</color>
+    <color name="light_pink3">#F48FB1</color>
+
+    <color name="light_purple1">#ddd3e6</color>
+    <color name="light_purple2">#d5c9e1</color>
+    <color name="light_purple3">#b5a1ca</color>
+
+
+    <color name="active_btn_purple_shade">#E8B0E6</color>
+    <color name="active_btn_pink_shade">#FFF8FF</color>
+
 </resources>
 
 

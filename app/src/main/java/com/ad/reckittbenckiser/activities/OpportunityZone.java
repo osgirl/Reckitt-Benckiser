@@ -23,18 +23,19 @@ public class OpportunityZone extends AppCompatActivity {
     FrameLayout eastLayout;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opporyunity_zone_design);
         ButterKnife.bind(this);
-        getSupportActionBar().setTitle("Opportunity Analysis Tool");
+        getSupportActionBar().setTitle("Opportunity Assessment Tool");
     }
 
     @OnClick(R.id.east)
-    public void goToEastZone(){
-        Intent intent = new Intent(OpportunityZone.this, DashBoardActivity.class);
+    public void goToEastZone() {
+        /*Intent intent = new Intent(OpportunityZone.this, DashBoardActivity.class);
+        startActivity(intent);*/
+        Intent intent = new Intent(OpportunityZone.this, AsmLeaderBoardActivity.class);
         startActivity(intent);
     }
 

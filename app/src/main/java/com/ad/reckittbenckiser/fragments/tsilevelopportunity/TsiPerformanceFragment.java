@@ -4,13 +4,19 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.ad.reckittbenckiser.R;
+import com.ad.reckittbenckiser.adapter.DistributorListAdapter;
 import com.ad.reckittbenckiser.utils.AppConfig;
+import com.ad.reckittbenckiser.utils.Constants;
 import com.ad.reckittbenckiser.utils.Tracer;
+import com.ad.reckittbenckiser.vo.DistributorInfo;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
@@ -18,6 +24,7 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,24 +36,44 @@ public class TsiPerformanceFragment extends Fragment {
 
     private String TAG = AppConfig.BaseTag + "." + TsiPerformanceFragment.class.getSimpleName();
 
-    @Bind(R.id.chart)
+    @Bind(R.id.fragment_distributor_list_rv)
+    RecyclerView distRecyclerView;
+
+    @Bind(R.id.tv_opp)
+    TextView tvOpp;
+
+    DistributorListAdapter distributorListAdapter;
+
+    List<DistributorInfo> distInfoList;
+
+    /*@Bind(R.id.chart)
     PieChart mChart;
 
     @Bind(R.id.unbilledChart)
-    PieChart mUnbilledChart;
+    PieChart mUnbilledChart;*/
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tsi_performance_fragment, null);
         ButterKnife.bind(this, view);
-
-        initiateBilledStoresChart();
-        initiateUnBilledStoresChart();
+        distInfoList = Constants.getDistributorList();
+        /*initiateBilledStoresChart();
+        initiateUnBilledStoresChart();*/
+        initAdapter();
         return view;
     }
 
-    private void initiateUnBilledStoresChart() {
+    private void initAdapter() {
+        tvOpp.setText(getString(R.string.rs) + "168.6");
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        distRecyclerView.setLayoutManager(llm);
+        distributorListAdapter = new DistributorListAdapter(getActivity(), distInfoList);
+        distRecyclerView.setAdapter(distributorListAdapter);
+    }
+
+    /*private void initiateUnBilledStoresChart() {
         mUnbilledChart.setDescription("");
         mUnbilledChart.setCenterText("Total 510");
         mUnbilledChart.setCenterTextSize(12f);
@@ -110,5 +137,5 @@ public class TsiPerformanceFragment extends Fragment {
             Color.rgb(179, 157, 219), Color.rgb(233, 53, 145)};
 
     public static final int[] SECOND_CHART = {
-            Color.rgb(215, 50, 147), Color.rgb(141, 107, 179)};
+            Color.rgb(215, 50, 147), Color.rgb(141, 107, 179)};*/
 }

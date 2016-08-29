@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/app_white_pattern"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/storyHeaderImage"
@@ -22,15 +21,15 @@
 
         <com.ad.reckittbenckiser.views.CustomTextView
             android:id="@+id/storyTitle"
-            android:text="East Zone"
-            app:font="@string/omens_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin40"
             android:layout_marginTop="@dimen/margin20"
+            android:text="East Zone"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            app:font="@string/omens_medium" />
 
         <View
             android:layout_width="60dp"
@@ -41,30 +40,29 @@
             android:background="@color/primary_text" />
 
         <TextView
+            android:id="@+id/storyDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/storyDate"
-            android:textSize="16dp"
-            android:layout_marginTop="@dimen/margin10"
-            android:visibility="gone"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin10"
             android:text="There will be some description of the zone. \nThere will be some description of the zone.\nThere will be some description of the zone. \nThere will be some description of the zone."
             android:textColor="@color/secondary_text"
-            />
+            android:textSize="16dp"
+            android:visibility="gone" />
 
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:layout_marginTop="@dimen/margin10"
+            android:background="@color/white"
             android:clipChildren="false"
+            android:visibility="gone"
             card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="4dp"
             card_view:cardElevation="8dp"
-            android:visibility="gone"
             card_view:cardUseCompatPadding="true">
 
             <com.ad.reckittbenckiser.views.CustomTextView
@@ -91,8 +89,8 @@
                 android:id="@+id/ll_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:clickable="true"
+                android:orientation="horizontal"
                 android:padding="10dp">
 
                 <LinearLayout
@@ -103,16 +101,16 @@
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Opportunity (Lakh)"
                         android:layout_marginTop="@dimen/margin10"
+                        android:text="Opportunity (Lakh)"
                         android:textColor="@color/primary_text"
                         android:textSize="20sp"
                         app:font="@string/omens_medium" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/margin10"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
                         android:background="@color/purple_darker"
                         android:gravity="center_horizontal"
                         android:orientation="vertical"
@@ -132,8 +130,8 @@
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chhattisgarh Growth"
                         android:layout_marginTop="@dimen/margin10"
+                        android:text="Chhattisgarh Growth"
                         android:textColor="@color/secondary_text"
                         android:textSize="20sp"
                         app:font="@string/omens_medium" />
@@ -201,17 +199,17 @@
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
                         android:text="Unbilled Store"
                         android:textColor="@color/secondary_text"
-                        android:layout_marginTop="@dimen/margin10"
                         android:textSize="20sp"
                         app:font="@string/omens_medium" />
 
                     <LinearLayout
                         android:id="@+id/ll_data"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="@dimen/margin10"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
                         android:background="@color/light_purple"
                         android:orientation="horizontal"
                         android:padding="10dp">
@@ -283,71 +281,70 @@
         </android.support.v7.widget.CardView>
 
         <com.ad.reckittbenckiser.views.CustomTextView
-            android:text="Opportunity from billed stores"
-            app:font="@string/omens_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin40"
             android:layout_marginTop="@dimen/margin20"
+            android:text="Opportunity from billed stores"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            app:font="@string/omens_medium" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/chart"
-            android:layout_marginTop="@dimen/margin10"
-            android:layout_gravity="center"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10" />
 
         <com.ad.reckittbenckiser.views.CustomTextView
-            android:text="Opportunity from Unbilled stores"
-            app:font="@string/omens_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin40"
             android:layout_marginTop="@dimen/margin20"
+            android:text="Opportunity from Unbilled stores"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            app:font="@string/omens_medium" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/unbilledChart"
-            android:layout_marginTop="@dimen/margin10"
-            android:layout_gravity="center"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10" />
 
         <com.ad.reckittbenckiser.views.CustomTextView
-            android:text="East region store segment"
-            app:font="@string/omens_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin20"
             android:layout_marginRight="@dimen/margin40"
             android:layout_marginTop="@dimen/margin20"
+            android:text="East region store segment"
             android:textColor="@color/primary_text"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            app:font="@string/omens_medium" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:layout_marginTop="@dimen/margin10"
             android:layout_marginLeft="@dimen/margin10"
             android:layout_marginRight="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin10"
             android:text=" The store coverage has dipped by 9% y-o-y."
             android:textColor="@color/secondary_text"
-            />
+            android:textSize="16dp" />
 
         <ImageView
             android:id="@+id/storeCoverage"
-            android:layout_marginTop="@dimen/margin20"
             android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/margin10"
-            android:layout_marginRight="@dimen/margin10"
             android:layout_height="200dp"
             android:layout_marginBottom="@dimen/margin20"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
             android:background="@drawable/chart"
             android:scaleType="centerCrop" />
 
