@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import com.ad.reckittbenckiser.R;
 import com.ad.reckittbenckiser.activities.DistributorListActivity;
@@ -76,6 +77,9 @@ public class AsmPerformanceFragment extends Fragment {
     @Bind(R.id.bar_chart)
     HorizontalBarChart horizontalBarChart;
 
+    @Bind(R.id.scrollview)
+    ScrollView scrollView;
+
     TsiListAdapter tsiListAdapter;
 
     List<TSIInfo> tsiInfoList;
@@ -91,6 +95,11 @@ public class AsmPerformanceFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         //tvOpp.setText(getString(R.string.rs) + "994.6");
+        scrollView.setEnabled(false);
+        tsiRecyclerView.setFocusable(false);
+//        adapter.notifyDataSetChanged();
+        scrollView.setEnabled(true);
+
         tvOppor.setText(getString(R.string.rs) + "994.6");
         initiateBilledStoresChart();
         initiateUnBilledStoresChart();

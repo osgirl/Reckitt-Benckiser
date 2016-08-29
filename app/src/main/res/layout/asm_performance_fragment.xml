@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_white_pattern"
+    android:id="@+id/scrollview"
     android:fillViewport="true"
     android:orientation="vertical">
 
@@ -251,13 +252,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:visibility="visible"></com.github.mikephil.charting.charts.HorizontalBarChart>
+            android:visibility="gone"></com.github.mikephil.charting.charts.HorizontalBarChart>
 
     </LinearLayout>
 </ScrollView>

@@ -10,7 +10,7 @@
         android:theme="@style/ActivityTheme">
 
         <activity
-            android:name=".activities.DistributorListActivity"
+            android:name=".activities.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme">
             <intent-filter>
@@ -39,11 +39,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/HomeTheme"></activity>
 
-        <!--<activity
+        <activity
             android:name=".activities.DistributorListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
--->
 
         <activity
             android:name=".activities.DbsrActivity"
