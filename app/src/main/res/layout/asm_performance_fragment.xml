@@ -101,9 +101,10 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Opportunity\n(in Lakhs)"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
-                        app:font="@string/omens_regular" />
+                        app:font="@string/omens_regular"
+                        android:id="@+id/customTextView" />
 
                     <com.ad.reckittbenckiser.views.CustomTextView
                         android:id="@+id/tv_oppor"
@@ -129,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Growth Monthly - Jul'16"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -155,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Growth \nQTD"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -253,10 +254,21 @@
             android:layout_marginTop="5dp"
             android:visibility="gone" />
 
+        <com.ad.reckittbenckiser.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="TSI/ASE list and opportunity in lakh"
+            android:textColor="@color/primary_text"
+            android:textSize="15sp"
+            app:font="@string/omens_medium" />
+
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="@dimen/margin10"
             android:visibility="visible"></com.github.mikephil.charting.charts.HorizontalBarChart>
 
     </LinearLayout>

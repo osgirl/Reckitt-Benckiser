@@ -199,35 +199,33 @@ public class AsmPerformanceFragment extends Fragment {
     public static final int[] SECOND_CHART = {
             Color.rgb(215, 50, 147), Color.rgb(141, 107, 179)};
 
+    public static final int[] BAR_CHART = {
+            Color.rgb(215, 50, 147), Color.rgb(141, 107, 179), Color.rgb(179, 157, 219), Color.rgb(233, 53, 145)};
+
     public void initHorizontalBarChart() {
         horizontalBarChart.setDrawGridBackground(false);
         horizontalBarChart.setDescription("");
-//        horizontalBarChart.invalidate();
 
         XAxis xl = horizontalBarChart.getXAxis();
         xl.setPosition(XAxis.XAxisPosition.BOTTOM);
         xl.setDrawAxisLine(true);
         xl.setDrawGridLines(false);
-//        xl.setGranularity(300f);
 
         YAxis yl = horizontalBarChart.getAxisLeft();
         yl.setDrawAxisLine(false);
         yl.setDrawGridLines(false);
-//        yl.setGranularity(50f);
         yl.setDrawLabels(true);
-        //yl.setGranularity(10f);
 
         YAxis yr = horizontalBarChart.getAxisRight();
         yr.setDrawAxisLine(true);
         yr.setDrawGridLines(false);
-//        yr.setGranularity(50f);
 
         setData(5);
         horizontalBarChart.setPinchZoom(false);
         horizontalBarChart.getAxisRight().setDrawLabels(false);
         horizontalBarChart.getLegend().setEnabled(false);   // Hide the legend
         horizontalBarChart.setFitBars(true);
-        //horizontalBarChart.animateY(2500);
+
         Legend l = horizontalBarChart.getLegend();
         l.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
         l.setFormSize(8f);
@@ -285,7 +283,9 @@ public class AsmPerformanceFragment extends Fragment {
         if (horizontalBarChart.getData() != null &&
                 horizontalBarChart.getData().getDataSetCount() > 0) {
             set1 = (BarDataSet) horizontalBarChart.getData().getDataSetByIndex(0);
-            set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
+            set1.setColors(BAR_CHART);
+
+            //set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
             set1.setValues(yVals1);
             horizontalBarChart.getData().notifyDataChanged();
             horizontalBarChart.notifyDataSetChanged();
@@ -295,10 +295,11 @@ public class AsmPerformanceFragment extends Fragment {
             ArrayList<IBarDataSet> dataSets = new ArrayList<>();
             dataSets.add(set1);
 
+            set1.setColors(BAR_CHART);
             BarData data = new BarData(dataSets);
             data.setValueTextSize(10f);
             data.setBarWidth(barWidth);
-            set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
+            //set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
             horizontalBarChart.setData(data);
         }
     }
