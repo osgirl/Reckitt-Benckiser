@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.ad.reckittbenckiser.R;
-import com.ad.reckittbenckiser.activities.DbsrActivity;
 import com.ad.reckittbenckiser.activities.StoreActivity;
 import com.ad.reckittbenckiser.views.CustomTextView;
 import com.ad.reckittbenckiser.vo.DbsrInfo;
-import com.ad.reckittbenckiser.vo.DistributorInfo;
 
 import java.util.List;
 
@@ -35,7 +33,8 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
 
     @Override
     public DbsrListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dbsr_list_row, parent, false);
+        //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dbsr_list_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.dist_list_row, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -43,16 +42,16 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         final DbsrInfo dbsrInfo = mDbsrList.get(position);
-
         holder.tvDistName.setText(dbsrInfo.getDbsrName());
         holder.tvGrowth.setText("  " + dbsrInfo.getGrowth());
         holder.tvOpp.setText(mContext.getString(R.string.rs) + dbsrInfo.getOpportunity());
 
-        if (position % 2 == 0) {
+       /* if (position % 2 == 0) {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.purple));
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink_shade));
-        }
+        }*/
+
         if (position == 1 || position == 3 || position == 4 || position == 5) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
         } else {
@@ -81,11 +80,11 @@ public class DbsrListAdapter extends RecyclerView.Adapter<DbsrListAdapter.ViewHo
 
         @Bind(R.id.ll_container)
         LinearLayout llContainer;
-
+/*
         @Bind(R.id.view)
-        View view;
+        View view;*/
 
-        @Bind(R.id.tv_dbsr_name)
+        @Bind(R.id.tv_dist_name)
         CustomTextView tvDistName;
 
         @Bind(R.id.tv_growth)

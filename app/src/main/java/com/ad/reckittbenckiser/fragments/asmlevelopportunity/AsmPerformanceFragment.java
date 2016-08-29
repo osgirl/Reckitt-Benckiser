@@ -120,7 +120,7 @@ public class AsmPerformanceFragment extends Fragment {
 
     private void initiateUnBilledStoresChart() {
         mUnbilledChart.setDescription("");
-        mUnbilledChart.setCenterText(getString(R.string.rs) + "410");
+        mUnbilledChart.setCenterText(getString(R.string.rs) + "410L");
         mUnbilledChart.setCenterTextSize(12f);
 
         // radius of the center hole in percent of maximum radius
@@ -166,7 +166,7 @@ public class AsmPerformanceFragment extends Fragment {
 
     private void initiateBilledStoresChart() {
         mChart.setDescription("");
-        mChart.setCenterText(getString(R.string.rs) + "583");
+        mChart.setCenterText(getString(R.string.rs) + "583L");
         mChart.setCenterTextSize(12f);
 
         // radius of the center hole in percent of maximum radius

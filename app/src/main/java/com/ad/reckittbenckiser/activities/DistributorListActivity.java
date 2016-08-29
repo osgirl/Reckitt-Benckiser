@@ -40,8 +40,7 @@ public class DistributorListActivity extends AppCompatActivity {
     CustomTextView tvTitle;
 
     private String TAG = AppConfig.BaseTag + "." + DistributorListActivity.class.getSimpleName();
-
-//    String Titles[] = {"Overall Performance", "Distributor List"};
+    //String Titles[] = {"Overall Performance", "Distributor List"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

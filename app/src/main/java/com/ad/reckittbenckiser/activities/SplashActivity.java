@@ -45,6 +45,8 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_splash_design);
         ButterKnife.bind(this);
         mSharedPreferenceManager = new SharedPreferenceManager(this);
+
+
         layoutKiaOra.setOnClickListener(this);
     }
 
@@ -54,7 +56,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
             radiationView.setBackgroundColor(Color.TRANSPARENT);
         }
         FrameLayout.LayoutParams radarParams = new FrameLayout.LayoutParams(
-                Util.getDeviceWidth(this), Util.getDeviceWidth(this)- Util.getDeviceWidth(this)/5);
+                Util.getDeviceWidth(this), Util.getDeviceWidth(this) - Util.getDeviceWidth(this) / 5);
 
         radarParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
         radarParams.setMargins(0, 0, 0, 110);
@@ -104,7 +106,6 @@ public class SplashActivity extends Activity implements View.OnClickListener {
 
         }, 1000);
     }
-
 
 
 }

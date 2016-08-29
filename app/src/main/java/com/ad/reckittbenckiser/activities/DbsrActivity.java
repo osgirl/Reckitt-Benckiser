@@ -59,5 +59,4 @@ public class DbsrActivity extends AppCompatActivity {
     public void back(){
         finish();
     }
-
 }

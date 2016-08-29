@@ -58,6 +58,7 @@ public class TsiPerformanceFragment extends Fragment {
         View view = inflater.inflate(R.layout.tsi_performance_fragment, null);
         ButterKnife.bind(this, view);
         distInfoList = Constants.getDistributorList();
+
         /*initiateBilledStoresChart();
         initiateUnBilledStoresChart();*/
         initAdapter();

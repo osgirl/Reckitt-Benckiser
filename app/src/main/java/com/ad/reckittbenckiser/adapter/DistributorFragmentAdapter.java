@@ -37,7 +37,6 @@ public class DistributorFragmentAdapter extends FragmentPagerAdapter {
     // This method return the titles for the Tabs in the Tab Strip
     @Override
     public CharSequence getPageTitle(int position) {
-
 //        return mFragmentTitleList.get(position);
         return "";
     }
