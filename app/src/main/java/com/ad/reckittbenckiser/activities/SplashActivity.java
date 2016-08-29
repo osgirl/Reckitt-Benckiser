@@ -57,7 +57,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
                 Util.getDeviceWidth(this), Util.getDeviceWidth(this) - Util.getDeviceWidth(this) / 5);
 
         radarParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
-        radarParams.setMargins(0, 0, 0, 30);
+        radarParams.setMargins(0, 0, 0, 0);
         frame.removeView(radiationView);
         frame.addView(radiationView, radarParams);
         radiationView.startRadarAnimation();

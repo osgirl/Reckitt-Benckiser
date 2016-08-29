@@ -90,7 +90,6 @@ public class AsmPerformanceFragment extends Fragment {
         View view = inflater.inflate(R.layout.asm_performance_fragment, null);
         ButterKnife.bind(this, view);
 
-        //tvOpp.setText(getString(R.string.rs) + "994.6");
         tvOppor.setText(getString(R.string.rs) + "994.6");
         initiateBilledStoresChart();
         initiateUnBilledStoresChart();
@@ -128,20 +127,8 @@ public class AsmPerformanceFragment extends Fragment {
         mUnbilledChart.setTransparentCircleRadius(38f);
         mUnbilledChart.setDrawEntryLabels(false);
 
-        /*ArrayList<String> xVals = new ArrayList<String>();
-        String[] valueArray = new String[]{"Q1", "Q2"};
-
-        for (int i = 0; i < valueArray.length + 1; i++)
-            xVals.add(valueArray[i % valueArray.length]);*/
-
         Legend l = mUnbilledChart.getLegend();
         l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-
-        /*PieData data = new PieData(generateUnBilledStoreData());
-        data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(12f);
-        data.setValueTextColor(Color.WHITE);
-        mChart.setData(data);*/
 
         mUnbilledChart.setData(generateUnBilledStoreData());
     }
@@ -274,17 +261,8 @@ public class AsmPerformanceFragment extends Fragment {
             }
         }
 
-        /*for (int i = 0; i < Constants.getTsiList().size(); i++) {
-            float val = (float) (Math.random() * range);
-            yVals1.add(new BarEntry(i * spaceForBar, val, Constants.getTsiList().get(i).getTsiName()));
-            yVals1.add(new BarEntry(i * spaceForBar, val));
-        }*/
-
         XAxis xAxis = horizontalBarChart.getXAxis();
         xAxis.setValueFormatter(new MyXAxisValueFormatter());
-        /*YAxis left = horizontalBarChart.getAxisLeft();
-        left.setValueFormatter(new MyYAxisValueFormatter(Constants.getTsiNameArray()));*/
-
         BarDataSet set1;
 
         if (horizontalBarChart.getData() != null &&

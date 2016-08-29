@@ -140,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:text="14.1%"
                         android:textColor="@color/white"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
                         app:font="@string/omens_regular" />
                 </LinearLayout>
 
@@ -175,20 +175,13 @@
                         android:layout_height="wrap_content"
                         android:text="4.9%"
                         android:textColor="@color/white"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
                         app:font="@string/omens_regular" />
 
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- <View
-                 android:layout_width="match_parent"
-                 android:layout_height="1dp"
-                 android:background="@color/white"></View>-->
-
         </LinearLayout>
-        <!--   </LinearLayout>
-       </android.support.v7.widget.CardView>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -252,24 +245,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:visibility="gone" />
-
-        <com.ad.reckittbenckiser.views.CustomTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:text="TSI/ASE list and opportunity in lakh"
-            android:textColor="@color/primary_text"
-            android:textSize="15sp"
-            app:font="@string/omens_medium" />
+            android:visibility="visible" />
 
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_marginTop="@dimen/margin10"
-            android:visibility="visible"></com.github.mikephil.charting.charts.HorizontalBarChart>
+            android:visibility="gone"></com.github.mikephil.charting.charts.HorizontalBarChart>
 
     </LinearLayout>
 </ScrollView>
