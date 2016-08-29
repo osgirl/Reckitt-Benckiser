@@ -39,7 +39,6 @@ public class StoreActivity extends AppCompatActivity {
     StoreListAdapter storeListAdapter;
 
     List<StoreInfo> storeInfoList;
-
     private String TAG = AppConfig.BaseTag + "." + StoreActivity.class.getSimpleName();
 
     @Override

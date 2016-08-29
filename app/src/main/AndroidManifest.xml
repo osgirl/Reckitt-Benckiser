@@ -7,12 +7,12 @@
         android:icon="@mipmap/rb_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/ActivityTheme">
 
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".activities.DistributorListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:theme="@style/ActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -39,10 +39,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/HomeTheme"></activity>
 
-        <activity
+        <!--<activity
             android:name=".activities.DistributorListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme"></activity>
+-->
 
         <activity
             android:name=".activities.DbsrActivity"

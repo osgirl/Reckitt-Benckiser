@@ -54,6 +54,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
         } else {
             holder.view.setBackgroundColor(mContext.getResources().getColor(R.color.pink));
         }
+
         if (position == 0 || position == 3) {
             holder.tvGrowth.setTextColor(mContext.getResources().getColor(R.color.red_color));
         } else {
