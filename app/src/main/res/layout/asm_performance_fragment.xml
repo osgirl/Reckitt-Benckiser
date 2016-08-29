@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_white_pattern"
-    android:id="@+id/scrollview"
     android:fillViewport="true"
     android:orientation="vertical">
 
@@ -98,11 +98,12 @@
                     android:orientation="vertical">
 
                     <com.ad.reckittbenckiser.views.CustomTextView
+                        android:id="@+id/customTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Opportunity\n(in Lakhs)"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -130,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Growth Monthly - Jul'16"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -156,7 +157,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Growth \nQTD"
-                        android:textColor="@color/secondary_text"
+                        android:textColor="@color/primary_text"
                         android:textSize="15sp"
                         app:font="@string/omens_regular" />
 
@@ -247,6 +248,16 @@
             </LinearLayout>
         </LinearLayout>
 
+        <com.ad.reckittbenckiser.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="TSI/ASE list and opportunity in lakh"
+            android:textColor="@color/primary_text"
+            android:textSize="15sp"
+            app:font="@string/omens_medium" />
+
         <include
             layout="@layout/fragment_tsi_list"
             android:layout_width="match_parent"
@@ -257,8 +268,8 @@
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="@dimen/margin10"
             android:visibility="gone"></com.github.mikephil.charting.charts.HorizontalBarChart>
-
     </LinearLayout>
 </ScrollView>

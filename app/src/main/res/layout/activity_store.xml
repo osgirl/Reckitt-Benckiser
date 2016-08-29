@@ -18,7 +18,7 @@
         android:clipChildren="false"
         card_view:cardBackgroundColor="@color/white"
         card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="8dp"
+        card_view:cardElevation="4dp"
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout

@@ -19,7 +19,7 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/background_circle_blue"
         android:gravity="center"
         android:orientation="vertical"
@@ -74,10 +74,9 @@
         android:id="@+id/ll_powered"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingRight="@dimen/margin10"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|right"
         android:orientation="vertical">
 
         <com.ad.reckittbenckiser.views.CustomTextView
@@ -85,15 +84,13 @@
             android:layout_height="wrap_content"
             android:text="powered by"
             android:textColor="@color/secondary_text"
-            android:textSize="15sp"
+            android:textSize="12sp"
             app:font="@string/omens_regular" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/adt" />
-
-
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:src="@drawable/adt_logo" />
     </LinearLayout>
 
 </FrameLayout>
