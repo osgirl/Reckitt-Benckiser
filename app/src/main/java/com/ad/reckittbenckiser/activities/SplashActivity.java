@@ -45,6 +45,8 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_splash_design);
         ButterKnife.bind(this);
         mSharedPreferenceManager = new SharedPreferenceManager(this);
+
+
         layoutKiaOra.setOnClickListener(this);
     }
 
