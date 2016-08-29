@@ -1,6 +1,7 @@
 package com.ad.reckittbenckiser.fragments.asmlevelopportunity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ad.reckittbenckiser.R;
+import com.ad.reckittbenckiser.activities.DistributorListActivity;
 import com.ad.reckittbenckiser.activities.TsiListActivity;
 import com.ad.reckittbenckiser.adapter.TsiListAdapter;
 import com.ad.reckittbenckiser.utils.AppConfig;
@@ -36,7 +38,9 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.AxisValueFormatter;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
@@ -75,6 +79,7 @@ public class AsmPerformanceFragment extends Fragment {
     TsiListAdapter tsiListAdapter;
 
     List<TSIInfo> tsiInfoList;
+    float spaceForBar = 10f;
 
     @Nullable
     @Override
@@ -218,6 +223,7 @@ public class AsmPerformanceFragment extends Fragment {
 //        yr.setGranularity(50f);
 
         setData(5);
+        horizontalBarChart.setPinchZoom(false);
         horizontalBarChart.getAxisRight().setDrawLabels(false);
         horizontalBarChart.getLegend().setEnabled(false);   // Hide the legend
         horizontalBarChart.setFitBars(true);
@@ -226,11 +232,26 @@ public class AsmPerformanceFragment extends Fragment {
         l.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
         l.setFormSize(8f);
         l.setXEntrySpace(4f);
+
+        horizontalBarChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+            @Override
+            public void onValueSelected(Entry e, Highlight h) {
+                Tracer.info(TAG, "AsmPerformanceFragment().onValueSelected(): " + e);
+                if (e.getY() == 168.6f) {
+                    Intent intent = new Intent(getActivity(), DistributorListActivity.class);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onNothingSelected() {
+
+            }
+        });
     }
 
     private void setData(int count) {
 
-        float spaceForBar = 10f;
         float barWidth = 9f;
 
         ArrayList<BarEntry> yVals1 = new ArrayList<>();
@@ -264,6 +285,7 @@ public class AsmPerformanceFragment extends Fragment {
         if (horizontalBarChart.getData() != null &&
                 horizontalBarChart.getData().getDataSetCount() > 0) {
             set1 = (BarDataSet) horizontalBarChart.getData().getDataSetByIndex(0);
+            set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
             set1.setValues(yVals1);
             horizontalBarChart.getData().notifyDataChanged();
             horizontalBarChart.notifyDataSetChanged();
@@ -276,6 +298,7 @@ public class AsmPerformanceFragment extends Fragment {
             BarData data = new BarData(dataSets);
             data.setValueTextSize(10f);
             data.setBarWidth(barWidth);
+            set1.setColors(new int[]{R.color.purple, R.color.accent, R.color.brinjal, R.color.green_color, R.color.red_color});
             horizontalBarChart.setData(data);
         }
     }
@@ -290,9 +313,12 @@ public class AsmPerformanceFragment extends Fragment {
         public String getFormattedValue(float value, AxisBase axis) {
             // "value" represents the position of the label on the axis (x or y)
             //return mValues[(int) value];
-            for (int i = 0; i < Constants.getTsiNameArray().length; i++) {
-                return Constants.getTsiNameArray()[i];
+            for (int i = 0; i < 5; i++) {
+                if (value == i * spaceForBar) {
+                    return Constants.getTsiNameArray()[i];
+                }
             }
+
             return "";
         }
 
@@ -303,17 +329,6 @@ public class AsmPerformanceFragment extends Fragment {
         public int getDecimalDigits() {
             return 0;
         }
-    }
-
-    private ArrayList<String> getXAxisValues() {
-        ArrayList<String> xAxis = new ArrayList<>();
-        xAxis.add("JAN");
-        xAxis.add("FEB");
-        xAxis.add("MAR");
-        xAxis.add("APR");
-        xAxis.add("MAY");
-        xAxis.add("JUN");
-        return xAxis;
     }
 
     public class MyValueFormatter implements ValueFormatter {
