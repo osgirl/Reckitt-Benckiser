@@ -219,17 +219,17 @@ public class AsmPerformanceFragment extends Fragment {
         YAxis yr = horizontalBarChart.getAxisRight();
         yr.setDrawAxisLine(true);
         yr.setDrawGridLines(false);
+        yr.setDrawLabels(false);
 
         setData(5);
         horizontalBarChart.setPinchZoom(false);
-        horizontalBarChart.getAxisRight().setDrawLabels(false);
         horizontalBarChart.getLegend().setEnabled(false);   // Hide the legend
         horizontalBarChart.setFitBars(true);
 
-        Legend l = horizontalBarChart.getLegend();
-        l.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
+        /*Legend l = horizontalBarChart.getLegend();
+        l.setPosition(Legend.LegendPosition.ABOVE_CHART_CENTER);
         l.setFormSize(8f);
-        l.setXEntrySpace(4f);
+        l.setXEntrySpace(4f);*/
 
         horizontalBarChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
